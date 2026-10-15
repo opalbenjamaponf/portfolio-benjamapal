@@ -368,17 +368,17 @@ section.block{padding-block:4.5rem;border-top:1px solid var(--line)}
 @media (max-width:480px){.cols{grid-template-columns:minmax(0,1fr)} .band{width:var(--wm);padding-inline:1.4rem} .band .tag{display:none}}
 
 /* ---------- off duty gallery ---------- */
-.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.4rem;padding-block:.5rem 2rem}
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2.6rem 1.4rem;padding-block:.5rem 2rem}
 .snap{position:relative;margin:0;aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:var(--paper);
   box-shadow:0 0 0 6px var(--paper),0 30px 50px -30px rgba(0,0,0,.5);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
-.snap:nth-child(1){transform:rotate(-2deg)}
-.snap:nth-child(2){transform:translateY(2rem) rotate(1.5deg)}
-.snap:nth-child(3){transform:rotate(-1deg)}
-.snap:nth-child(4){transform:translateY(2rem) rotate(2deg)}
+.snap:nth-child(4n+1){transform:rotate(-2deg)}
+.snap:nth-child(4n+2){transform:translateY(2rem) rotate(1.5deg)}
+.snap:nth-child(4n+3){transform:rotate(-1deg)}
+.snap:nth-child(4n+4){transform:translateY(2rem) rotate(2deg)}
 .snap:hover{transform:translateY(-.4rem) rotate(0) scale(1.02);z-index:1}
 .snap img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
 .snap figcaption{position:absolute;left:.8rem;bottom:.8rem;font-size:.78rem;font-weight:500;color:#fff;padding:.3rem .8rem;border-radius:999px;
-  background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  background:rgba(20,20,24,.28);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);text-shadow:0 1px 4px rgba(0,0,0,.3)}
 @media (max-width:860px){
   .gallery{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:68%;overflow-x:auto;scroll-snap-type:x mandatory;padding:.8rem .6rem 1.6rem;scrollbar-width:none}
   .gallery::-webkit-scrollbar{display:none}
@@ -697,6 +697,10 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
       <figure class="snap"><img src="img/opal-cappadocia.webp" alt="Opal smiling in sunglasses among the rock formations of Cappadocia" loading="lazy" width="900" height="1109"><figcaption>Cappadocia</figcaption></figure>
       <figure class="snap"><img src="img/opal-black-sand.webp" alt="Opal taking a photo on black volcanic sand near Ubud, Bali" loading="lazy" width="900" height="1153"><figcaption>Volcanic black sand · Ubud, Bali</figcaption></figure>
       <figure class="snap"><img src="img/opal-shanghai-street.webp" alt="Opal smiling on a Shanghai street in a cream sweater" loading="lazy" width="900" height="1262"><figcaption>Shanghai</figcaption></figure>
+      <figure class="snap"><img src="img/opal-taipei.webp" alt="Opal smiling on steps with Taipei 101 behind her" loading="lazy" width="900" height="1169"><figcaption>Taipei</figcaption></figure>
+      <figure class="snap"><img src="img/opal-bali-temple.webp" alt="Opal greeting with a wai in front of a Balinese temple gate" loading="lazy" width="900" height="1221"><figcaption>Temple gate · Bali</figcaption></figure>
+      <figure class="snap"><img src="img/opal-disneyland.webp" alt="Opal in a red jacket in front of the castle at Shanghai Disneyland" loading="lazy" width="900" height="1168"><figcaption>Shanghai Disneyland</figcaption></figure>
+      <figure class="snap"><img src="img/opal-sunset.webp" alt="Opal smiling on a beach at sunset" loading="lazy" width="900" height="1240"><figcaption>Golden hour by the sea</figcaption></figure>
     </div>
   </section>
   <a class="next" href="#contact"><span>Next</span>Contact →</a>
