@@ -255,6 +255,72 @@ section.block{padding-block:4.5rem;border-top:1px solid var(--line)}
 @media (max-width:1000px){.track{grid-auto-columns:calc((100% - 2*1.1rem)/3)}}
 @media (max-width:760px){.track{grid-auto-columns:calc((100% - 1.1rem)/2)} .proginfo{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:480px){.track{grid-auto-columns:72%}}
+
+/* ---------- photo moments ---------- */
+.profile{position:relative;width:min(100%,22rem);aspect-ratio:4/5;border-radius:34px;overflow:hidden;background:#FAEDDB;color:#232326;
+  box-shadow:0 0 0 8px var(--paper),0 40px 70px -34px rgba(60,50,30,.45);margin-bottom:1.2rem}
+.profile .photo{position:absolute;left:0;right:0;bottom:0;top:17%;width:100%;height:83%;object-fit:cover;object-position:50% 0%;-webkit-mask-image:linear-gradient(180deg,transparent,#000 8%);mask-image:linear-gradient(180deg,transparent,#000 8%)}
+.ptop{position:absolute;top:1.2rem;left:0;right:0;display:grid;justify-items:center;gap:.15rem}
+.ptop b{font-size:1.7rem;font-weight:500;letter-spacing:-.03em;line-height:1}
+.status{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;color:#4a463e}
+.status i{width:.5rem;height:.5rem;border-radius:50%;background:#3FA66A;box-shadow:0 0 0 0 rgba(63,166,106,.5);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 7px rgba(63,166,106,0)}100%{box-shadow:0 0 0 0 rgba(63,166,106,0)}}
+.pfade{position:absolute;left:0;right:0;bottom:0;height:42%;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  background:linear-gradient(180deg,rgba(150,150,112,0),rgba(140,142,104,.55));-webkit-mask-image:linear-gradient(180deg,transparent,#000 55%);mask-image:linear-gradient(180deg,transparent,#000 55%)}
+.pbar{position:absolute;left:1rem;right:1rem;bottom:1rem;display:flex;align-items:center;gap:.6rem;text-align:left;color:#fff}
+.pbar .av{width:2.5rem;height:2.5rem;border-radius:50%;object-fit:cover;object-position:50% 15%;border:2px solid rgba(255,255,255,.8)}
+.pbar div{display:grid;line-height:1.25;min-width:0}
+.pbar b{font-size:.98rem;font-weight:600}
+.pbar span{font-size:.75rem;opacity:.85}
+.say{margin-left:auto;flex:none;background:#fff;color:#1E1E21;text-decoration:none;font-weight:600;font-size:.9rem;padding:.6rem 1rem;border-radius:14px;
+  box-shadow:0 8px 20px -10px rgba(0,0,0,.4);transition:transform .2s}
+.say:hover{transform:translateY(-2px)}
+.feature{position:relative;display:block;border-radius:30px;overflow:hidden;aspect-ratio:16/8;margin-bottom:4.5rem;color:#fff;text-decoration:none;
+  box-shadow:0 40px 80px -50px rgba(0,0,0,.6)}
+.feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.feature:hover img{transform:scale(1.03)}
+.glasscap{position:absolute;right:clamp(1rem,4%,2.5rem);bottom:clamp(1rem,6%,2.5rem);width:min(30rem,42%);display:grid;gap:2rem;padding:1.6rem 1.8rem;border-radius:26px;
+  background:linear-gradient(160deg,rgba(255,255,255,.28),rgba(255,255,255,.08));border:1px solid rgba(255,255,255,.4);
+  backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.glasscap p{font-size:clamp(1.3rem,2.6vw,2rem);font-weight:500;letter-spacing:-.02em;line-height:1.25;text-shadow:0 1px 12px rgba(0,0,0,.18)}
+.capfoot{display:flex;justify-content:space-between;align-items:center}
+.mk{font-weight:700;letter-spacing:.08em;font-size:.85rem}
+.mk em,.hello-mk em{font-family:var(--f-serif);font-weight:400;letter-spacing:0;font-size:1.15em}
+.circ{width:3rem;height:3rem;border-radius:50%;border:1.5px solid rgba(255,255,255,.8);display:grid;place-items:center;transition:background .3s,color .3s}
+.circ svg{width:45%;height:45%}
+.feature:hover .circ{background:#fff;color:#1E1E21}
+.sky{position:relative;height:30rem;border-radius:30px;overflow:hidden;margin-bottom:1.6rem;background:var(--pill)}
+.sky-bg{position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;object-position:50% 25%;filter:blur(26px) saturate(1.1);opacity:.85}
+.sky::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 70% at 50% 45%,transparent,color-mix(in srgb,var(--bg) 55%,transparent));pointer-events:none}
+.sky-tiles{position:absolute;inset:0;z-index:1}
+.tile{all:unset;box-sizing:border-box;position:absolute;display:grid;justify-items:center;gap:.4rem;cursor:pointer;translate:-50% -50%;width:7.5rem;text-align:center}
+.tile .tt{width:4.6rem;aspect-ratio:1;border-radius:10px;overflow:hidden;background:var(--tint);box-shadow:0 14px 26px -12px rgba(0,0,0,.45);
+  border:3px solid #fff;transition:transform .35s cubic-bezier(.2,.8,.2,1);display:grid;place-items:center;font-size:1.6rem;font-weight:600;color:rgba(35,35,38,.35)}
+.tile .tt{position:relative}
+.tile .tt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile span{font-size:.66rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.45);line-height:1.25}
+.tile:hover .tt,.tile:focus-visible .tt{transform:scale(1.12) rotate(-3deg)}
+.tile[aria-pressed="true"] .tt{border-color:var(--blue)}
+.hello{position:relative;width:min(100%,46rem);aspect-ratio:4/3;border-radius:30px;overflow:hidden;color:#FFF6DC;box-shadow:0 40px 80px -50px rgba(0,0,0,.6)}
+.hello img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.hello::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),transparent 30%,rgba(0,0,0,.15) 55%,rgba(0,0,0,.55))}
+.hello-mk,.hello-tag{position:absolute;top:1.4rem;z-index:1;font-size:.85rem}
+.hello-mk{left:1.6rem;font-weight:700;letter-spacing:.08em}
+.hello-tag{right:1.6rem;font-family:var(--f-mono);letter-spacing:.14em}
+.hello-copy{position:absolute;left:0;right:0;bottom:2rem;z-index:1;display:grid;justify-items:center;gap:1.1rem;padding-inline:1.5rem}
+.hello h2{color:#FFF6DC;font-size:clamp(1.6rem,4vw,2.6rem);letter-spacing:-.035em;max-width:20ch;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+.hello-btn{background:#4E5320;color:#FFF6DC;text-decoration:none;font-weight:500;padding:.45rem .9rem;border-radius:4px;font-size:.95rem}
+.hello-btn:hover{background:#3d4119}
+@media (max-width:700px){
+  .feature{aspect-ratio:4/5}
+  .glasscap{gap:1.2rem;padding:1.2rem 1.3rem;left:1rem;right:1rem;width:auto}
+  .hello{aspect-ratio:4/5}
+  .sky{height:auto;padding:1.4rem .8rem}
+  .sky-tiles{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem .4rem}
+  .tile{position:relative;translate:none;left:auto!important;top:auto!important;width:6.4rem}
+  .tile .tt{width:4rem}
+}
+@media (prefers-reduced-motion:reduce){.status i{animation:none}}
 /* ---------- approach ---------- */
 .approach{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;align-items:start}
 .tenets{display:grid;gap:0}
@@ -329,16 +395,14 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
 
 <main class="wrap" id="top">
   <section class="hero">
-    <div class="folder on" id="heroFolder" aria-hidden="true">
-      <div class="back"></div>
-      <div class="papers">
-        <div class="paper" style="--tint:var(--t-lead)"><span>Product &amp; Project</span></div>
-        <div class="paper" style="--tint:var(--t-design)"><span>Organic Growth</span></div>
-        <div class="paper" style="--tint:var(--t-people)"><span>TV &amp; Podcast</span></div>
-      </div>
-      <div class="front">
-        <span class="lab">*OPAL, IN FOLDERS.</span>
-        <div class="foot"><span></span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
+    <div class="profile">
+      <img class="photo" src="img/opal-studio.webp" alt="Opal smiling in a sage dress against a warm beige wall" width="503" height="629">
+      <div class="ptop"><b>Opal</b><span class="status"><i aria-hidden="true"></i>Open to new projects</span></div>
+      <div class="pfade" aria-hidden="true"></div>
+      <div class="pbar">
+        <img class="av" src="img/opal-studio.webp" alt="" width="40" height="40">
+        <div><b>@benjamapal</b><span>Product · Project · On air</span></div>
+        <a class="say" href="https://www.instagram.com/benjamapal/" target="_blank" rel="noopener">+ Say hi</a>
       </div>
     </div>
     <h1 aria-label="BENJAMAPAL">BENJAMA<em>PAL</em></h1>
@@ -352,6 +416,14 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
     </div>
     <a class="btn cta" href="#explore">Explore Opal ↓</a>
   </section>
+
+  <a class="feature" href="#explore" aria-label="Explore Opal's work">
+    <img src="img/opal-bali.webp" alt="Opal laughing in front of Bali rice terraces" loading="lazy" width="654" height="767">
+    <div class="glasscap">
+      <p>A storyteller’s instinct, a metrics mind. From TV sets to product squads.</p>
+      <div class="capfoot"><span class="mk">BENJAMA<em>PAL</em></span><span class="circ" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </div>
+  </a>
 
   <section class="block" id="explore">
     <div class="head">
@@ -399,6 +471,10 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
       <div><p class="label">On screen &amp; on air</p><h2>Hosting, <em class="s">episode by episode.</em></h2></div>
       <p>Programmes, ads, a music video and a short film across Thai PBS, NBT, YouTube, Facebook and podcast. Pick a programme, then open any episode.</p>
     </div>
+    <div class="sky" id="sky">
+      <img class="sky-bg" src="img/opal-backdrop.webp" alt="" loading="lazy">
+      <div class="sky-tiles" id="skyTiles"></div>
+    </div>
     <div class="progs" id="progs" role="group" aria-label="Choose a programme"></div>
     <div class="proginfo" id="proginfo" aria-live="polite"></div>
     <div class="reel-bar">
@@ -430,8 +506,12 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
   </section>
 
   <section class="contact" id="contact">
-    <p class="label">Contact</p>
-    <h2>Building something <em class="s">worth growing?</em></h2>
+    <div class="hello">
+      <img src="img/opal-shanghai.webp" alt="Opal laughing on a sunny Shanghai street" loading="lazy" width="659" height="873">
+      <span class="hello-mk">BENJAMA<em>PAL</em></span><span class="hello-tag">CONTACT</span>
+      <div class="hello-copy"><h2>For the teams that care about how they grow…</h2>
+        <a class="hello-btn" href="https://www.instagram.com/benjamapal/" target="_blank" rel="noopener">say hi →</a></div>
+    </div>
     <div class="mailcard">
       <code id="email">benjamapon.f@gmail.com</code>
       <button class="btn" id="copy" type="button">Copy email</button>
@@ -657,6 +737,19 @@ $("#track").addEventListener("scroll",()=>requestAnimationFrame(updateReel),{pas
 $("#track").addEventListener("keydown",e=>{if(e.key==="ArrowRight"){e.preventDefault();slide(1)}if(e.key==="ArrowLeft"){e.preventDefault();slide(-1)}});
 $("#progs").addEventListener("click",e=>{const b=e.target.closest(".prog"); if(b){prog=b.dataset.p;renderReel();}});
 addEventListener("resize",updateReel);
+/* On-air constellation: one tile per programme, floating around the portrait */
+const SPOTS=[[16,22],[33,14],[70,13],[86,26],[12,52],[88,58],[24,82],[50,86],[76,82]];
+function renderSky(){
+  $("#skyTiles").innerHTML=PROGRAMMES.map((P,i)=>{
+    const [x,y]=SPOTS[i%SPOTS.length], first=P.eps.find(e=>thumbOf(e)), t=first?thumbOf(first):"";
+    return `<button type="button" class="tile" data-p="${P.id}" aria-pressed="${P.id===prog}" style="left:${x}%;top:${y}%;--tint:var(${P.tint})">
+      <span class="tt">${t?`<img src="${t}" alt="" loading="lazy" onerror="this.remove()">`:""}${P.name.slice(0,1)}</span><span>${P.name}</span></button>`;}).join("");
+}
+$("#skyTiles").addEventListener("click",e=>{const b=e.target.closest(".tile"); if(!b) return; prog=b.dataset.p; renderReel(); renderSky();
+  $("#progs").scrollIntoView({behavior:smooth(),block:"start"});});
+$("#progs").addEventListener("click",()=>renderSky());
+renderSky();
+
 function showProgramme(id){prog=id;renderReel();$("#screen").scrollIntoView({behavior:smooth(),block:"start"});}
 renderReel();
 const start=(location.hash==="#skill"||location.hash==="#time")?location.hash.slice(1):(()=>{try{return localStorage.getItem("opal-mode")}catch(e){return null}})();
