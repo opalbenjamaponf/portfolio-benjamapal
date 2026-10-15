@@ -67,7 +67,8 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;padding-block
   background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);
   border:1px solid var(--glass-edge);border-radius:999px;padding:.5rem .6rem .5rem 1.2rem;box-shadow:0 10px 30px -18px rgba(0,0,0,.3)}
 .mark{font-weight:700;letter-spacing:.14em;font-size:.8rem;text-decoration:none;color:var(--ink)}
-nav{display:flex;gap:.25rem}
+nav{display:flex;gap:.25rem;margin-left:auto}
+nav a{white-space:nowrap}
 nav a{text-decoration:none;color:var(--muted);font-size:.9rem;padding:.35rem .85rem;border-radius:999px}
 nav a:hover{color:var(--ink);background:var(--pill)}
 
@@ -384,6 +385,31 @@ section.block{padding-block:4.5rem;border-top:1px solid var(--line)}
   .snap{scroll-snap-align:center}
   .snap:nth-child(n){transform:none}
 }
+
+/* ---------- appearance themes ---------- */
+:root[data-look="sand"]{--bg:#F6EFE6;--ink:#2A2620;--muted:#857B6E;--line:#E7DCCD;--pill:#ECE1D2;--back:#3A322A;--blue:#B5733F;
+  --t-lead:#E3CCAE;--t-design:#D5D2B8;--t-learn:#D9CDBF;--t-people:#E6C9BD;--t-voice:#D8CABB;color-scheme:light}
+:root[data-look="sage"]{--bg:#EEF1EA;--ink:#22261F;--muted:#717A6A;--line:#DAE1D3;--pill:#E1E7DA;--back:#2C3328;--blue:#5E7F4E;
+  --t-lead:#D6DAC0;--t-design:#C3D3BC;--t-learn:#C6D3CC;--t-people:#D9D0C3;--t-voice:#CDD1C6;color-scheme:light}
+:root[data-look="sky"]{--bg:#EEF3FA;--ink:#1D2433;--muted:#6B7590;--line:#D9E2EF;--pill:#E0E8F3;--back:#25304A;--blue:#3A73E8;
+  --t-lead:#D3DCEB;--t-design:#C9DCE6;--t-learn:#BFD0EC;--t-people:#DCD3E6;--t-voice:#CCCDEB;color-scheme:light}
+:root[data-look="blush"]{--bg:#F8EEEE;--ink:#2E2224;--muted:#8A7377;--line:#EBDADC;--pill:#F0E1E3;--back:#3A2A2E;--blue:#C2566E;
+  --t-lead:#EBD3CC;--t-design:#E3D5D0;--t-learn:#DCD3E0;--t-people:#EECAD0;--t-voice:#E2CCD8;color-scheme:light}
+.look{position:relative;flex:none}
+.look-btn{width:2.3rem;height:2.3rem;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center}
+.look-btn svg{width:1.1rem;height:1.1rem}
+.look-btn:hover,.look-btn[aria-expanded="true"]{background:var(--pill)}
+.look-menu{position:absolute;right:0;top:calc(100% + .7rem);width:17.5rem;padding:1rem;border-radius:20px;display:grid;gap:.7rem;
+  background:color-mix(in srgb,var(--bg) 82%,transparent);border:1px solid var(--glass-edge);backdrop-filter:blur(22px) saturate(1.6);-webkit-backdrop-filter:blur(22px) saturate(1.6);
+  box-shadow:inset 0 1px 0 var(--glass-edge),0 24px 50px -24px rgba(0,0,0,.45)}
+.looks{display:grid;gap:.5rem}
+.lrow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.3rem}
+.lrow-t{font-size:.7rem;color:var(--muted);padding-left:.2rem}
+.sw{font:inherit;cursor:pointer;display:grid;justify-items:center;gap:.35rem;padding:.55rem .2rem;border-radius:14px;border:1px solid transparent;background:transparent;color:var(--ink);font-size:.74rem}
+.sw:hover{background:var(--pill)}
+.sw[aria-pressed="true"]{border-color:var(--ink);background:var(--pill)}
+.sw i{width:2rem;height:2rem;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12);background:linear-gradient(135deg,var(--a) 50%,var(--b) 50%)}
+@media (max-width:420px){nav a{padding:.35rem .4rem;font-size:.8rem} .bar{gap:.4rem;padding-left:.9rem}}
 /* ---------- approach ---------- */
 .approach{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;align-items:start}
 .tenets{display:grid;gap:0}
@@ -453,6 +479,15 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
       <a href="#approach" class="wide">Approach</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="look">
+      <button type="button" class="look-btn" id="lookBtn" aria-haspopup="true" aria-expanded="false" aria-controls="lookMenu" aria-label="Appearance">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg>
+      </button>
+      <div class="look-menu" id="lookMenu" role="group" aria-label="Appearance" hidden>
+        <p class="label">Appearance</p>
+        <div class="looks" id="looks"></div>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -862,6 +897,36 @@ renderSky();
 
 function showProgramme(id){prog=id;renderReel();$("#screen").scrollIntoView({behavior:smooth(),block:"start"});}
 renderReel();
+
+/* Appearance: system, light, dark, plus tinted looks. Remembered per viewer. */
+const LOOKS=[
+  {id:"system",name:"System",a:"#F4F4F6",b:"#111113"},
+  {id:"light",name:"Light",a:"#F4F4F6",b:"#FFFFFF"},
+  {id:"dark",name:"Dark",a:"#111113",b:"#3A3A40"},
+  {id:"sand",name:"Sand",a:"#F6EFE6",b:"#B5733F"},
+  {id:"sage",name:"Sage",a:"#EEF1EA",b:"#5E7F4E"},
+  {id:"sky",name:"Sky",a:"#EEF3FA",b:"#3A73E8"},
+  {id:"blush",name:"Blush",a:"#F8EEEE",b:"#C2566E"}
+];
+let look="system";
+try{look=localStorage.getItem("opal-look")||"system"}catch(e){}
+function applyLook(id){
+  look=id; const r=document.documentElement;
+  if(id==="system"){r.removeAttribute("data-theme");r.removeAttribute("data-look");}
+  else if(id==="light"||id==="dark"){r.setAttribute("data-theme",id);r.removeAttribute("data-look");}
+  else{r.setAttribute("data-theme","light");r.setAttribute("data-look",id);}
+  try{localStorage.setItem("opal-look",id)}catch(e){}
+  const sw=L=>`<button type="button" class="sw" data-look="${L.id}" aria-pressed="${L.id===look}" style="--a:${L.a};--b:${L.b}"><i></i>${L.name}</button>`;
+  $("#looks").innerHTML=`<span class="lrow-t">Mode</span><div class="lrow">${LOOKS.slice(0,3).map(sw).join("")}</div>
+    <span class="lrow-t">Tint</span><div class="lrow">${LOOKS.slice(3).map(sw).join("")}</div>`;
+}
+const lookBtn=$("#lookBtn"), lookMenu=$("#lookMenu");
+function toggleLook(open){lookMenu.hidden=!open;lookBtn.setAttribute("aria-expanded",open);}
+lookBtn.addEventListener("click",e=>{e.stopPropagation();toggleLook(lookMenu.hidden);});
+$("#looks").addEventListener("click",e=>{e.stopPropagation();const b=e.target.closest(".sw"); if(b) applyLook(b.dataset.look);});
+document.addEventListener("click",e=>{if(!lookMenu.hidden&&!e.target.closest(".look")) toggleLook(false);});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!lookMenu.hidden){toggleLook(false);lookBtn.focus();}});
+applyLook(look);
 const start=(location.hash==="#skill"||location.hash==="#time")?location.hash.slice(1):(()=>{try{return localStorage.getItem("opal-mode")}catch(e){return null}})();
 setMode(start==="skill"?"skill":"time",false);
 </script>
