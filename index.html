@@ -321,6 +321,50 @@ section.block{padding-block:4.5rem;border-top:1px solid var(--line)}
   .tile .tt{width:4rem}
 }
 @media (prefers-reduced-motion:reduce){.status i{animation:none}}
+
+/* ---------- diagrams ---------- */
+.diagram{grid-column:1/-1;margin:0;padding-top:1.6rem;border-top:1px solid var(--line);display:grid;gap:1.2rem}
+.diagram figcaption{display:grid;gap:.2rem}
+.diagram figcaption b{font-size:1.15rem;font-weight:600;letter-spacing:-.01em}
+.funnel ol{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+.funnel ol>li{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:1.2rem;align-items:center}
+.band{justify-self:center;width:var(--w);min-height:3.6rem;display:flex;align-items:center;gap:.8rem;padding:.6rem 1.1rem;color:#fff;
+  background:color-mix(in srgb,var(--blue) calc(var(--a)*100%),#9fb3d6);border-radius:14px;
+  clip-path:polygon(0 0,100% 0,96% 100%,4% 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.4)}
+.band .step{font-family:var(--f-mono);font-size:.72rem;opacity:.85}
+.band .ft{font-weight:600;font-size:.98rem;line-height:1.25}
+.band .ft i{font-style:normal;opacity:.8}
+.band .tag{margin-left:auto;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.22);border-radius:999px;padding:.15rem .6rem;white-space:nowrap}
+.funnel li.loop .band{background:transparent;color:var(--ink);border:1.5px dashed var(--blue);clip-path:none;border-radius:999px}
+.funnel li.loop .tag{background:var(--pill)}
+.funnel li.loop .band{width:max(var(--w),19rem);max-width:100%}
+.levers{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.3rem}
+.levers li{font-size:.82rem;background:var(--pill);border-radius:999px;padding:.2rem .7rem}
+.loopnote{font-size:.9rem;color:var(--muted)}
+.loopnote b{color:var(--ink);font-weight:600}
+.temple{gap:.7rem}
+.temple figcaption{margin-bottom:.5rem}
+.roof{position:relative;height:3.2rem;display:grid;place-items:center;color:var(--bg);background:var(--ink);clip-path:polygon(4% 100%,50% 0,96% 100%);padding-top:1rem}
+.roof span{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+.cols{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.6rem;padding-inline:3%}
+.col{padding:1rem .9rem;border-radius:14px;background:var(--glass);border:1px solid var(--glass-edge);box-shadow:inset 0 1px 0 var(--glass-edge);display:grid;align-content:start;gap:.5rem;
+  border-top:4px solid var(--ink)}
+.col.fresh{border-top-color:var(--blue)}
+.col h5{margin:0;font-size:1rem;font-weight:600;display:flex;align-items:center;gap:.4rem;flex-wrap:wrap}
+.col h5 em{font-style:normal;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:var(--blue);color:#fff;border-radius:999px;padding:.1rem .5rem}
+.col .full{font-size:.74rem;color:var(--muted);margin-top:-.3rem}
+.col ul{margin:0;padding-left:1rem;display:grid;gap:.3rem;font-size:.85rem}
+.col .note2{font-family:var(--f-mono);font-size:.68rem;color:var(--muted)}
+.base{display:flex;flex-wrap:wrap;gap:.4rem .8rem;align-items:center;justify-content:center;padding:.8rem 1rem;border-radius:12px;background:var(--pill);font-size:.85rem;text-align:center}
+.base span{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.base i{font-style:normal;color:var(--blue)}
+@media (max-width:860px){
+  .funnel ol>li{grid-template-columns:minmax(0,1fr);gap:.4rem}
+  .levers{justify-content:center}
+  .cols{grid-template-columns:repeat(2,minmax(0,1fr));padding-inline:0}
+  .col:last-child{grid-column:1/-1}
+}
+@media (max-width:480px){.cols{grid-template-columns:minmax(0,1fr)} .band{width:var(--wm);padding-inline:1.4rem} .band .tag{display:none}}
 /* ---------- approach ---------- */
 .approach{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;align-items:start}
 .tenets{display:grid;gap:0}
@@ -537,9 +581,9 @@ const SKILLS = {
   podcast: {group:"comm", name:"Podcast", sub:"Producer / Host / Editor", tint:"--t-lead",
             sum:"Independent series built end to end: guest negotiation, planning, recording, editing and distribution."},
   seo:     {group:"tech", name:"SEO", sub:"Organic search", tint:"--t-design",
-            sum:"Landing-page ecosystems and technical SEO that grow organic visibility and tie rankings to revenue."},
+            sum:"Landing-page ecosystems and technical SEO that grow organic visibility and tie rankings to revenue.", diagram:"pillars"},
   cro:     {group:"tech", name:"CRO", sub:"Experimentation", tint:"--t-learn",
-            sum:"Hypothesis-led A/B and multivariate testing that moves organic sign-ups and trial-to-paid conversion."},
+            sum:"Hypothesis-led A/B and multivariate testing that moves organic sign-ups and trial-to-paid conversion.", diagram:"funnel"},
   po:      {group:"tech", name:"Product Owner", sub:"Discovery to delivery", tint:"--t-lead",
             sum:"Owning roadmaps end to end and leading cross-functional Agile squads from insight to measurable result."},
   pm:      {group:"tech", name:"Project Manager", sub:"Timelines & stakeholders", tint:"--t-voice",
@@ -660,8 +704,42 @@ function renderPanel(k){
     ${ev.length?`<ul class="ev">${ev.map(([id,t,l,pg])=>`<li><span class="y">${id?short(eraById[id].when):""}</span>
       <div><b>${t}</b><p>${l}</p>${pg?`<button type="button" data-prog="${pg}">${pg==="ads"?"Watch it":"Watch the episodes"} →</button>`:`<button type="button" data-era="${id}">See it in the timeline →</button>`}</div></li>`).join("")}</ul>`
       :`<p class="placeholder">Ads and music-video work will be filed here. Send the titles, years and roles and they will appear in this folder.</p>`}
+    ${S.diagram?DIAGRAMS[S.diagram]():""}
   </div>`;
 }
+
+/* ===== Diagrams inside the CRO and SEO folders ===== */
+const FUNNEL=[
+  {from:"Impression",to:"Sign up",tag:"Acquire",levers:["Landing pages and SEO traffic","Headline, CTA and form tests","Page speed and trust signals"]},
+  {from:"Sign up",to:"Activate",tag:"Activate",levers:["Onboarding flow experiments","A clear first-value moment","Setup guides and how-to videos"]},
+  {from:"Activate",to:"Purchase",tag:"Convert",levers:["Trial-to-paid journeys","Pricing page and plan comparison","Upgrade prompts in context"]},
+  {from:"Purchase",to:"Retention",tag:"Retain",levers:["Lifecycle nurture content","Feature education","Usage tracked in Looker Studio"]},
+  {from:"At risk",to:"Saved",tag:"Reduce churn",levers:["Drop-off spotted in Hotjar and Clarity","Help before the cancel click","Win-back for lapsed users"],loop:true}
+];
+const PILLARS=[
+  {name:"Blog content",items:["Target keyword set-up","Competitor gap analysis","Content audit and refresh"]},
+  {name:"Technical SEO",items:["Full website audit","Prioritised task list","Assigned and shipped with dev"],note:"Core Web Vitals · schema · internal links"},
+  {name:"Website content",items:["Landing and product pages","On-page optimisation","Internal links to money pages"]},
+  {name:"AEO",full:"Answer Engine Optimisation",fresh:true,items:["Answer-first FAQ blocks","FAQ and HowTo schema","Featured snippets and AI Overviews"]},
+  {name:"GEO",full:"Generative Engine Optimisation",fresh:true,items:["Clear brand and entity facts","Citable stats and original data","Show up in ChatGPT, Perplexity and Gemini answers"]}
+];
+const DIAGRAMS={
+  funnel:()=>`<figure class="diagram funnel" aria-label="Growth funnel, stage to stage">
+    <figcaption><span class="label">Growth funnel</span><b>Funnel to funnel: every hand-off is an experiment.</b></figcaption>
+    <ol>${FUNNEL.map((f,i)=>`<li class="${f.loop?"loop":""}" style="--w:${100-i*14}%;--wm:${100-i*7}%;--a:${.95-i*.15}">
+      <div class="band"><span class="step">${f.loop?"↺":String(i+1).padStart(2,"0")}</span><span class="ft">${f.from} <i>→</i> ${f.to}</span><span class="tag">${f.tag}</span></div>
+      <ul class="levers">${f.levers.map(l=>`<li>${l}</li>`).join("")}</ul></li>`).join("")}</ol>
+    <p class="loopnote">Each stage runs the same loop: <b>hypothesis</b> → <b>GrowthBook test</b> → <b>read the funnel</b> → <b>ship or learn</b>.</p>
+  </figure>`,
+  pillars:()=>`<figure class="diagram temple" aria-label="SEO pillars">
+    <figcaption><span class="label">SEO, built on pillars</span><b>Organic growth for search engines and answer engines.</b></figcaption>
+    <div class="roof"><span>Organic growth</span></div>
+    <div class="cols">${PILLARS.map(p=>`<div class="col ${p.fresh?"fresh":""}">
+      <h5>${p.name}${p.fresh?`<em>New</em>`:""}</h5>${p.full?`<p class="full">${p.full}</p>`:""}
+      <ul>${p.items.map(x=>`<li>${x}</li>`).join("")}</ul>${p.note?`<p class="note2">${p.note}</p>`:""}</div>`).join("")}</div>
+    <div class="base"><span>Measurement</span>GA4 · Search Console · Ahrefs · SEMrush <i>→</i> rankings, CTR and page-level revenue</div>
+  </figure>`
+};
 
 function setMode(m,scroll){
   mode=m;
