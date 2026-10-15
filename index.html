@@ -270,6 +270,14 @@ section.block{padding-block:4.5rem;border-top:1px solid var(--line)}
 .mailcard code{font-family:var(--f-mono);font-size:1rem;user-select:all}
 .btn{font:inherit;font-size:.9rem;font-weight:500;border:0;border-radius:999px;background:#1E1E21;color:#fff;padding:.6rem 1.2rem;cursor:pointer}
 .note{font-size:.82rem;color:var(--muted);max-width:30rem}
+.channels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;width:min(100%,46rem)}
+.ch{position:relative;display:grid;gap:.15rem;text-align:left;text-decoration:none;color:var(--ink);padding:1rem 1.2rem;border-radius:18px;
+  background:var(--glass);border:1px solid var(--glass-edge);box-shadow:inset 0 1px 0 var(--glass-edge),0 16px 34px -26px rgba(0,0,0,.4);transition:transform .3s}
+.ch b{font-size:1.05rem;font-weight:600;letter-spacing:-.01em;user-select:all;font-variant-numeric:tabular-nums}
+.ch i{position:absolute;top:.9rem;right:1rem;font-style:normal;color:var(--muted);transition:color .3s,transform .3s}
+.ch:hover{transform:translateY(-2px)}
+.ch:hover i{color:var(--blue);transform:translate(2px,-2px)}
+@media (max-width:600px){.channels{grid-template-columns:minmax(0,1fr)}}
 footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:1.5rem 2rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}
 
 .cta{text-decoration:none;margin-top:.8rem;padding:.75rem 1.5rem}
@@ -427,6 +435,11 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
     <div class="mailcard">
       <code id="email">benjamapon.f@gmail.com</code>
       <button class="btn" id="copy" type="button">Copy email</button>
+    </div>
+    <div class="channels">
+      <a class="ch" href="tel:+66999264424"><span class="label">Phone</span><b>+66 99 926 4424</b><i aria-hidden="true">↗</i></a>
+      <a class="ch" href="https://www.instagram.com/benjamapal/" target="_blank" rel="noopener"><span class="label">Instagram</span><b>@benjamapal</b><i aria-hidden="true">↗</i></a>
+      <a class="ch" href="https://line.me/ti/p/~bjmpal" target="_blank" rel="noopener"><span class="label">LINE</span><b>bjmpal</b><i aria-hidden="true">↗</i></a>
     </div>
     <p class="note">Based in Bangkok, Thailand.</p>
   </section>
