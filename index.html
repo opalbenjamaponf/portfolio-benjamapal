@@ -474,12 +474,6 @@ body{padding-bottom:calc(6.5rem + env(safe-area-inset-bottom,0px))}
 }
 @media (max-width:600px){
   .pg-t{display:none}
-  .dock{gap:0;padding:.3rem;border-radius:20px}
-  .dock a{min-width:0;flex:1;padding:.45rem .25rem .35rem;font-size:.6rem}
-  .dock svg{width:1.2rem;height:1.2rem}
-  .dock a span{display:none}
-  .dock a[aria-current="page"]{flex:1.8}
-  .dock a[aria-current="page"] span{display:block}
   .next{justify-self:center}
 }
 /* short pages: centre the content in the screen, keep next/footer at the bottom */
@@ -489,6 +483,31 @@ body{padding-bottom:calc(6.5rem + env(safe-area-inset-bottom,0px))}
   #page-home .next{align-self:end}
 }
 @media (prefers-reduced-motion:reduce){.page:not([hidden]){animation:none}}
+
+/* ---------- liquid glass dock (iOS style) ---------- */
+:root{--lg-fill:rgba(255,255,255,.56);--lg-edge:rgba(255,255,255,.75);--lg-shade:rgba(0,0,0,.06);--lg-pill:rgba(255,255,255,.72);--lg-pill-edge:rgba(255,255,255,.95)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--lg-fill:rgba(36,36,42,.6);--lg-edge:rgba(255,255,255,.16);--lg-shade:rgba(0,0,0,.35);--lg-pill:rgba(255,255,255,.14);--lg-pill-edge:rgba(255,255,255,.28)}}
+:root[data-theme="dark"]{--lg-fill:rgba(36,36,42,.6);--lg-edge:rgba(255,255,255,.16);--lg-shade:rgba(0,0,0,.35);--lg-pill:rgba(255,255,255,.14);--lg-pill-edge:rgba(255,255,255,.28)}
+.dock{background:var(--lg-fill);border:1px solid var(--lg-edge);border-radius:32px;padding:.35rem;gap:.1rem;
+  backdrop-filter:blur(24px) saturate(1.9) brightness(1.04);-webkit-backdrop-filter:blur(24px) saturate(1.9) brightness(1.04);
+  box-shadow:inset 0 1.5px 1px var(--lg-edge),inset 0 -1px 1px var(--lg-shade),0 1px 2px rgba(0,0,0,.06),0 18px 40px -12px rgba(0,0,0,.28)}
+.dock::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0) 45%),radial-gradient(120% 60% at 50% 120%,rgba(255,255,255,.18),transparent 60%);mix-blend-mode:soft-light}
+.dock-pill{position:absolute;top:.35rem;bottom:.35rem;left:0;width:0;border-radius:26px;background:var(--lg-pill);border:1px solid var(--lg-pill-edge);
+  box-shadow:inset 0 1px 1px var(--lg-pill-edge),0 4px 14px -6px rgba(0,0,0,.25);transition:left .45s cubic-bezier(.3,1.4,.4,1),width .45s cubic-bezier(.3,1.4,.4,1);pointer-events:none;z-index:0}
+.dock a{z-index:1;border-radius:26px;min-width:4.6rem;padding:.55rem .5rem .45rem;color:var(--muted);transition:color .25s,transform .25s cubic-bezier(.2,.8,.2,1)}
+.dock a[aria-current="page"]{background:transparent;color:var(--ink)}
+.dock a[aria-current="page"] svg{color:var(--blue)}
+.dock a:active{transform:scale(.92)}
+@media (max-width:600px){
+  .dock{left:.75rem;right:.75rem;translate:none;max-width:none;justify-content:space-between;padding:.4rem;border-radius:30px}
+  .dock a{flex:1;min-width:0;padding:.6rem .1rem .5rem;font-size:.66rem;gap:.25rem}
+  .dock svg{width:1.45rem;height:1.45rem}
+  .dock a:hover{transform:none}
+  .dock-pill{top:.4rem;bottom:.4rem;border-radius:24px}
+  body{padding-bottom:calc(7rem + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){.dock-pill{transition:none}}
 /* ---------- approach ---------- */
 .approach{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;align-items:start}
 .tenets{display:grid;gap:0}
@@ -738,6 +757,7 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
 </div>
 </main>
 <nav class="dock" aria-label="Pages">
+  <span class="dock-pill" aria-hidden="true"></span>
   <a href="#home" data-go="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
   <a href="#work" data-go="work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Work</span></a>
   <a href="#onair" data-go="onair"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg><span>On air</span></a>
@@ -1052,6 +1072,7 @@ function go(id,opts={}){
   $("#pgT").textContent=PAGE_NAMES[id];
   $("#pgPrev").disabled=i===0; $("#pgNext").disabled=i===PAGE_IDS.length-1;
   if(id==="onair") updateReel&&requestAnimationFrame(updateReel);
+  requestAnimationFrame(movePill);
   if(!opts.keepScroll) window.scrollTo({top:0,behavior:"auto"});
   try{history.replaceState(null,"","#"+id)}catch(e){}
 }
@@ -1061,6 +1082,10 @@ document.addEventListener("click",e=>{
   const target=ALIAS[id]||id;
   if(PAGE_IDS.includes(target)){e.preventDefault();go(target);}
 });
+
+function movePill(){const a=document.querySelector('.dock a[aria-current="page"]'),pill=document.querySelector(".dock-pill"); if(!a||!pill) return;
+  pill.style.left=a.offsetLeft+"px"; pill.style.width=a.offsetWidth+"px";}
+addEventListener("resize",movePill);
 $("#pgPrev").addEventListener("click",()=>go(PAGE_IDS[Math.max(0,PAGE_IDS.indexOf(page)-1)]));
 $("#pgNext").addEventListener("click",()=>go(PAGE_IDS[Math.min(PAGE_IDS.length-1,PAGE_IDS.indexOf(page)+1)]));
 document.addEventListener("keydown",e=>{
