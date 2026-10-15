@@ -1,14 +1,17 @@
 # portfolio-benjamapal
 
-เว็บไซต์ Portfolio รวบรวมผลงานของ Benjamapal
+Portfolio of Benjamapon Faijaree (Opal): Product Owner + Project Manager, organic growth, TV and podcast host.
 
-## โครงสร้าง
-- `index.html` — โครงหน้าเว็บ (Hero, About, Works, Contact)
-- `style.css` — สไตล์ (รองรับ Dark mode)
-- `script.js` — รายการผลงาน แก้ไข array `works` เพื่อเพิ่มผลงาน
+Live: https://opalbenjamaponf.github.io/portfolio-benjamapal/
 
-## ดูบนเครื่อง
-เปิด `index.html` ในเบราว์เซอร์ได้เลย
+## Structure
+Everything lives in one file, `index.html` (styles and scripts inline).
 
-## Deploy ด้วย GitHub Pages
-Settings → Pages → Source: `Deploy from a branch` → Branch: `main` / `(root)`
+## Editing content
+Search `index.html` for these data blocks inside the `<script>`:
+- `ERAS`: the "By time" timeline
+- `SKILLS`, `GROUPS`, `EVIDENCE`: the "By skill" folders
+- `PROGRAMMES`: the "On screen & on air" reel (YouTube links; thumbnails load from YouTube automatically)
+
+## Deploy
+GitHub Pages, Settings → Pages → Deploy from a branch → `main` / `(root)`.

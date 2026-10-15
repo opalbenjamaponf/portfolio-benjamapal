@@ -1,49 +1,1246 @@
-<!DOCTYPE html>
-<html lang="th">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Benjamapal | Portfolio</title>
-  <meta name="description" content="Portfolio รวบรวมผลงานของ Benjamapal" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Benjamapon Faijaree (Opal) — Product Owner and Project Manager with organic growth skills and a background in TV and podcast hosting.">
+<meta property="og:title" content="Benjamapon (Opal) — Collected Works">
+<meta property="og:description" content="Product Owner + Project Manager. Organic growth. TV and podcast host.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://opalbenjamaponf.github.io/portfolio-benjamapal/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='6' width='26' height='22' rx='5' fill='%232B2B2F'/%3E%3Crect x='2' y='13' width='28' height='16' rx='5' fill='%234F8BF7' fill-opacity='.85'/%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}html{scroll-behavior:smooth}</style>
+<title>Benjamapon (Opal) · Collected Works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a filing cabinet. One large glass folder opens the page; the archive is a grid of glass folders, one per discipline; choosing a folder files the index below it. */
+:root{
+  --bg:#F4F4F6;
+  --ink:#232326;
+  --muted:#7C7C84;
+  --line:#E2E2E7;
+  --pill:#E6E6EA;
+  --back:#2B2B2F;                       /* folder spine */
+  --paper:#FFFFFF;
+  --glass:linear-gradient(180deg,rgba(255,255,255,.62),rgba(255,255,255,.34) 55%,rgba(255,255,255,.78));
+  --glass-edge:rgba(255,255,255,.85);
+  --glass-shadow:0 30px 60px -28px rgba(30,30,40,.35);
+  --blue:#4F8BF7;                       /* the one bright note */
+  --t-lead:#D9CBB4; --t-design:#C7D1C3; --t-learn:#C3CFDD; --t-people:#DCC6C2; --t-voice:#CFC8D9; --t-all:#D6D6DB;
+  --f-display:"Hanken Grotesk","Anuphan",ui-sans-serif,system-ui,sans-serif;
+  --f-serif:"Instrument Serif","Times New Roman",serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --r:22px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111113; --ink:#EDEDF0; --muted:#8E8E97; --line:#26262B; --pill:#222227;
+  --back:#3A3A40; --paper:#E9E9EC;
+  --glass:linear-gradient(180deg,rgba(60,60,68,.55),rgba(40,40,46,.35) 55%,rgba(70,70,78,.7));
+  --glass-edge:rgba(255,255,255,.14); --glass-shadow:0 30px 60px -24px rgba(0,0,0,.7);
+  --blue:#6FA2FF;
+  --t-lead:#6E6252; --t-design:#56614F; --t-learn:#4F5D6E; --t-people:#6E5652; --t-voice:#5E5670; --t-all:#55555C;
+  color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#111113; --ink:#EDEDF0; --muted:#8E8E97; --line:#26262B; --pill:#222227;
+  --back:#3A3A40; --paper:#E9E9EC;
+  --glass:linear-gradient(180deg,rgba(60,60,68,.55),rgba(40,40,46,.35) 55%,rgba(70,70,78,.7));
+  --glass-edge:rgba(255,255,255,.14); --glass-shadow:0 30px 60px -24px rgba(0,0,0,.7);
+  --blue:#6FA2FF;
+  --t-lead:#6E6252; --t-design:#56614F; --t-learn:#4F5D6E; --t-people:#6E5652; --t-voice:#5E5670; --t-all:#55555C;
+  color-scheme:dark;}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-display);font-size:1rem;line-height:1.65;-webkit-font-smoothing:antialiased;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:72rem;margin:0 auto}
+h1,h2,h3,p{margin:0}
+h2{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:600;letter-spacing:-.025em;line-height:1.1;text-wrap:balance}
+em.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spacing:0}
+.label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.pill{display:inline-block;background:var(--pill);color:var(--muted);border-radius:999px;padding:.3rem 1.1rem;font-size:.92rem;font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:8px}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;padding-block:.9rem}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);
+  border:1px solid var(--glass-edge);border-radius:999px;padding:.5rem .6rem .5rem 1.2rem;box-shadow:0 10px 30px -18px rgba(0,0,0,.3)}
+.mark{font-weight:700;letter-spacing:.14em;font-size:.8rem;text-decoration:none;color:var(--ink)}
+nav{display:flex;gap:.25rem}
+nav a{text-decoration:none;color:var(--muted);font-size:.9rem;padding:.35rem .85rem;border-radius:999px}
+nav a:hover{color:var(--ink);background:var(--pill)}
+
+/* ---------- glass folder component ---------- */
+.folder{position:relative;width:100%;aspect-ratio:5/4;--tint:var(--t-all)}
+.folder .back{position:absolute;left:6%;right:6%;top:12%;bottom:6%;background:var(--back);border-radius:var(--r)}
+.folder .back::before{content:"";position:absolute;left:0;top:-9%;width:42%;height:20%;background:var(--back);border-radius:var(--r) var(--r) 0 0;
+  clip-path:polygon(0 0,82% 0,100% 100%,0 100%)}
+.folder .papers{position:absolute;inset:0}
+.paper{position:absolute;top:8%;width:36%;aspect-ratio:3/4;border-radius:14px;background:var(--paper);padding:5px;
+  box-shadow:0 12px 26px -14px rgba(0,0,0,.35);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.paper span{display:flex;align-items:flex-start;height:100%;border-radius:10px;padding:.55rem;font-size:.66rem;line-height:1.3;font-weight:500;color:#2a2a2e;
+  background:radial-gradient(120% 90% at 20% 10%,rgba(255,255,255,.7),transparent 60%),var(--tint)}
+.paper:nth-child(1){left:12%;transform:rotate(-9deg)}
+.paper:nth-child(2){left:32%;top:4%;transform:rotate(0deg);z-index:1}
+.paper:nth-child(3){left:52%;transform:rotate(8deg)}
+.folder .front{position:absolute;left:4%;right:4%;bottom:4%;height:56%;border-radius:var(--r);z-index:2;
+  background:var(--glass);backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5);
+  border:1px solid var(--glass-edge);box-shadow:inset 0 1px 0 var(--glass-edge),var(--glass-shadow);
+  display:flex;flex-direction:column;justify-content:space-between;padding:1rem 1.1rem;text-align:left}
+.front .lab{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink);opacity:.8}
+.front .foot{display:flex;justify-content:space-between;align-items:flex-end;gap:.5rem}
+.arrow{flex:none;width:2.6rem;height:2.6rem;border-radius:50%;background:#1E1E21;color:#fff;display:grid;place-items:center;
+  box-shadow:0 0 0 3px rgba(255,255,255,.7);transition:transform .4s ease}
+.arrow svg{width:42%;height:42%}
+.folder:hover .paper:nth-child(1),.folder.on .paper:nth-child(1){transform:translate(-10%,-10%) rotate(-14deg)}
+.folder:hover .paper:nth-child(2),.folder.on .paper:nth-child(2){transform:translateY(-14%)}
+.folder:hover .paper:nth-child(3),.folder.on .paper:nth-child(3){transform:translate(10%,-10%) rotate(13deg)}
+.folder:hover .arrow{transform:rotate(45deg)}
+
+/* ---------- hero ---------- */
+.hero{display:grid;justify-items:center;text-align:center;gap:1.2rem;padding-block:2.5rem 5rem}
+.hero .folder{max-width:30rem}
+.hero .paper{width:34%}
+.hero .paper span{font-size:.78rem}
+.hero h1{font-size:clamp(3rem,11vw,7.5rem);font-weight:600;letter-spacing:-.04em;line-height:.95;margin-top:.6rem}
+.hero .role{font-size:clamp(1.05rem,2.4vw,1.35rem);font-weight:500;letter-spacing:-.01em}
+.hero .sub{max-width:40rem;color:var(--muted);font-size:1.1rem}
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-top:.6rem}
+.fact{display:grid;gap:.1rem;min-width:9.5rem;padding:.8rem 1.2rem;border-radius:18px;text-align:left;
+  background:var(--glass);border:1px solid var(--glass-edge);box-shadow:inset 0 1px 0 var(--glass-edge),0 16px 34px -24px rgba(0,0,0,.35)}
+.fact b{font-size:1.6rem;font-weight:600;letter-spacing:-.03em;line-height:1.1;font-variant-numeric:tabular-nums}
+.fact span{font-size:.82rem;color:var(--muted)}
+.kit{grid-column:1/-1;display:grid;gap:.9rem;margin-top:1rem}
+.kit .row2{display:grid;grid-template-columns:12rem minmax(0,1fr);gap:1rem;align-items:baseline}
+.kit .tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.kit .tags span{background:var(--pill);border-radius:999px;padding:.2rem .75rem;font-size:.82rem;color:var(--ink)}
+.hero .sub em{color:var(--ink)}
+
+/* ---------- explore chooser ---------- */
+section.block{padding-block:4.5rem;border-top:1px solid var(--line)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.head p{max-width:24rem;color:var(--muted)}
+.choose{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;max-width:56rem;margin:0 auto}
+.drawer{all:unset;box-sizing:border-box;cursor:pointer;display:grid;gap:.9rem;border-radius:var(--r)}
+.drawer .meta{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding-inline:.4rem}
+.drawer h3{font-size:1.25rem;font-weight:600;letter-spacing:-.01em}
+.drawer .meta p{font-size:.9rem;color:var(--muted);text-align:right}
+.drawer[aria-pressed="true"] .arrow{background:var(--blue)}
+.drawer[aria-pressed="true"] h3::after{content:"";display:inline-block;width:.45rem;height:.45rem;border-radius:50%;background:var(--blue);margin-left:.5rem;vertical-align:middle}
+.drawer[aria-pressed="false"] .folder{opacity:.72;transition:opacity .3s}
+.drawer:hover .folder{opacity:1}
+.seg{position:sticky;top:calc(env(safe-area-inset-top,0px) + 5.2rem);z-index:6;display:flex;justify-content:center;margin:3.5rem 0 2.5rem}
+.seg div{display:inline-flex;gap:.25rem;padding:.3rem;border-radius:999px;background:var(--glass);border:1px solid var(--glass-edge);
+  backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);box-shadow:inset 0 1px 0 var(--glass-edge),0 12px 30px -20px rgba(0,0,0,.35)}
+.seg button{font:inherit;font-size:.92rem;border:0;background:transparent;color:var(--muted);padding:.45rem 1.2rem;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+/* ---------- time view ---------- */
+.timeline{list-style:none;margin:0;padding:0;display:grid}
+.era{display:grid;grid-template-columns:9rem 1.5rem minmax(0,1fr);gap:1rem;scroll-margin-top:9rem}
+.era .when{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);padding-top:1.45rem;text-align:right;font-variant-numeric:tabular-nums}
+.era .rail{position:relative}
+.era .rail::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--line)}
+.era .rail::after{content:"";position:absolute;left:50%;top:1.7rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--bg);border:2px solid var(--ink);translate:-50% 0}
+.era.now .rail::after{background:var(--blue);border-color:var(--blue);box-shadow:0 0 0 5px color-mix(in srgb,var(--blue) 22%,transparent)}
+.era:first-child .rail::before{top:1.7rem}
+.era:last-child .rail::before{bottom:auto;height:1.7rem}
+.card{margin-bottom:1.4rem;padding:1.3rem 1.5rem;border-radius:var(--r);background:var(--glass);border:1px solid var(--glass-edge);
+  box-shadow:inset 0 1px 0 var(--glass-edge),0 20px 44px -34px rgba(0,0,0,.45);display:grid;gap:.6rem}
+.card .org{font-size:.88rem;color:var(--muted)}
+.card h3{font-size:1.25rem;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.card ul{margin:0;padding-left:1.1rem;display:grid;gap:.3rem;max-width:44rem}
+.card li{color:var(--ink);font-size:.95rem}
+.card li b{font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.2rem}
+.tags span,.tags button{font:inherit;font-size:.8rem;border:0;border-radius:999px;padding:.22rem .8rem;background:var(--pill);color:var(--muted)}
+.tags button{cursor:pointer;color:var(--ink);display:inline-flex;align-items:center;gap:.35rem}
+.tags button::after{content:"↗";font-size:.75rem;color:var(--muted)}
+.tags button:hover{background:var(--ink);color:var(--bg)}
+
+/* ---------- skill view ---------- */
+.group{display:grid;gap:1.6rem;margin-bottom:3.5rem}
+.group-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:.8rem}
+.group-head h3{font-size:1.6rem;font-weight:600;letter-spacing:-.02em}
+.group-head p{color:var(--muted);font-size:.95rem}
+.shelf{display:grid;gap:1.6rem 1.2rem}
+.shelf.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.shelf.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.shelf .drawer h3{font-size:1.05rem}
+.shelf .drawer .meta span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.shelf .front{padding:.8rem .9rem}
+.shelf .arrow{width:2.2rem;height:2.2rem}
+.shelf .pill{font-size:.78rem;padding:.2rem .8rem}
+.empty-folder .papers .paper span{background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(0,0,0,.05) 8px 9px),var(--tint)}
+.panel{padding:1.6rem 1.7rem;border-radius:var(--r);background:var(--glass);border:1px solid var(--glass-edge);
+  box-shadow:inset 0 1px 0 var(--glass-edge),var(--glass-shadow);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:2rem;scroll-margin-top:9rem}
+.panel h4{font-size:1.7rem;font-weight:600;letter-spacing:-.02em;line-height:1.15;margin:0}
+.panel .sub{font-family:var(--f-serif);font-style:italic;font-size:1.2rem;color:var(--muted)}
+.panel .sum{margin-top:.8rem;color:var(--ink)}
+.ev{list-style:none;margin:0;padding:0;display:grid}
+.ev li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:1rem;padding-block:.85rem;border-top:1px solid var(--line)}
+.ev li:first-child{border-top:0;padding-top:0}
+.ev .y{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);padding-top:.2rem}
+.ev b{font-weight:600;display:block}
+.ev p{color:var(--muted);font-size:.93rem}
+.ev button{all:unset;cursor:pointer;font-size:.82rem;color:var(--blue);margin-top:.2rem;display:inline-block}
+.ev button:focus-visible{outline:2px solid var(--blue)}
+.placeholder{color:var(--muted);border:1px dashed var(--line);border-radius:14px;padding:1rem 1.2rem}
+
+
+/* ---------- on screen reel ---------- */
+.progs{display:flex;gap:.5rem;overflow-x:auto;padding:.3rem .1rem 1rem;scrollbar-width:none;margin-bottom:.4rem;
+  -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.progs::after{content:"";flex:none;width:3rem}
+.progs::-webkit-scrollbar{display:none}
+.prog{flex:none;font:inherit;cursor:pointer;display:flex;align-items:center;gap:.6rem;padding:.45rem .55rem .45rem 1rem;border-radius:999px;
+  border:1px solid var(--line);background:transparent;color:var(--ink);font-size:.92rem;white-space:nowrap}
+.prog i{font-style:normal;font-family:var(--f-mono);font-size:.72rem;background:var(--pill);color:var(--muted);border-radius:999px;padding:.1rem .55rem}
+.prog[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.prog[aria-pressed="true"] i{background:color-mix(in srgb,var(--bg) 20%,transparent);color:var(--bg)}
+.proginfo{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem 2rem;align-items:end;padding:1.3rem 1.5rem;border-radius:var(--r);margin-bottom:1.4rem;
+  background:var(--glass);border:1px solid var(--glass-edge);box-shadow:inset 0 1px 0 var(--glass-edge),0 20px 44px -34px rgba(0,0,0,.45)}
+.proginfo h3{font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:600;letter-spacing:-.02em;line-height:1.15}
+.proginfo h3 em{font-family:var(--f-serif);font-weight:400;color:var(--muted);font-size:.7em;margin-left:.4rem}
+.proginfo p{color:var(--muted);margin-top:.3rem}
+.proginfo dl{margin:0;display:flex;gap:1.6rem;flex-wrap:wrap}
+.proginfo dt{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.proginfo dd{margin:.15rem 0 0;font-size:.92rem;font-weight:500}
+.solo{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;padding-top:1rem;border-top:1px solid var(--line)}
+.solo span{font-size:.82rem;background:var(--pill);border-radius:999px;padding:.22rem .8rem}
+.solo .badge{background:var(--blue);color:#fff;font-weight:500}
+.solo a{margin-left:auto;font-size:.88rem;color:var(--ink);text-decoration:none;font-weight:500;padding:.3rem .9rem;border-radius:999px;border:1px solid var(--line)}
+.solo a:hover{background:var(--ink);color:var(--bg)}
+.reel-bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1rem}
+.reel-bar .count{font-family:var(--f-mono);font-size:.78rem;color:var(--muted)}
+.nav2{display:flex;gap:.5rem}
+.nav2 button{width:2.8rem;height:2.8rem;border-radius:50%;border:1px solid var(--glass-edge);background:var(--glass);color:var(--ink);cursor:pointer;font-size:1.1rem;
+  box-shadow:inset 0 1px 0 var(--glass-edge),0 10px 24px -16px rgba(0,0,0,.4);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nav2 button:disabled{opacity:.35;cursor:default}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*1.1rem)/4);gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:.4rem .2rem 1.4rem;scrollbar-width:none;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.clip{scroll-snap-align:start;text-decoration:none;color:inherit;min-width:0;display:block}
+.thumb{position:relative;aspect-ratio:1/1;max-width:100%;border-radius:20px;padding:6px;background:var(--paper);
+  box-shadow:0 18px 36px -24px rgba(0,0,0,.5);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.thumb .img{position:absolute;inset:6px;border-radius:15px;overflow:hidden;padding:1rem 1rem 4.2rem;display:flex;flex-direction:column;justify-content:space-between;
+  background:radial-gradient(130% 80% at 15% 0%,rgba(255,255,255,.75),transparent 60%),var(--tint);color:#232326}
+.thumb .ep{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;opacity:.75}
+.thumb .num{font-size:3.4rem;font-weight:600;letter-spacing:-.05em;line-height:1;opacity:.16;position:absolute;right:.8rem;top:2rem}
+.thumb h4{margin:0;font-family:"Anuphan",var(--f-display);font-size:1.12rem;font-weight:600;line-height:1.35;letter-spacing:-.005em;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;position:relative}
+.thumb .d{font-family:"Anuphan",var(--f-display);font-size:.84rem;line-height:1.45;opacity:.72;margin-top:.35rem;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.thumb .glassbar{position:absolute;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:.5rem;
+  padding:.45rem .5rem .45rem .8rem;border-radius:13px;background:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.75);
+  backdrop-filter:blur(14px) saturate(1.5);-webkit-backdrop-filter:blur(14px) saturate(1.5);color:#232326}
+.thumb .kind{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.play{flex:none;width:2.1rem;height:2.1rem;border-radius:50%;background:#1E1E21;color:#fff;display:grid;place-items:center;transition:transform .3s,background .3s}
+.play svg{width:38%;height:38%}
+.thumb.has-img .img{color:#fff;background:#1E1E21}
+.thumb .cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
+.thumb.has-img .cover{opacity:1}
+.thumb.has-img .img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 30%,transparent 40%,rgba(0,0,0,.75))}
+.thumb.has-img .ep,.thumb.has-img .img>div{position:relative;z-index:1}
+.thumb.has-img .num{display:none}
+.clip:hover .thumb,.clip:focus-visible .thumb{transform:translateY(-4px)}
+.clip:hover .play{transform:scale(1.1);background:var(--blue)}
+.dots{display:flex;justify-content:center;gap:.4rem;flex-wrap:wrap}
+.dots i{width:.45rem;height:.45rem;border-radius:999px;background:var(--line);transition:width .3s,background .3s}
+.dots i.on{width:1.4rem;background:var(--ink)}
+@media (max-width:1000px){.track{grid-auto-columns:calc((100% - 2*1.1rem)/3)}}
+@media (max-width:760px){.track{grid-auto-columns:calc((100% - 1.1rem)/2)} .proginfo{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:480px){.track{grid-auto-columns:72%}}
+/* ---------- approach ---------- */
+.approach{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;align-items:start}
+.tenets{display:grid;gap:0}
+.tenet{display:grid;grid-template-columns:8rem minmax(0,1fr);gap:1rem;padding-block:1.3rem;border-top:1px solid var(--line)}
+.tenet h3{font-size:1rem;font-weight:600}
+.tenet p{color:var(--muted)}
+.quote{grid-column:1/-1;font-family:var(--f-serif);font-size:clamp(1.6rem,3.6vw,2.6rem);line-height:1.25;letter-spacing:-.01em;max-width:46rem;margin-top:1rem}
+
+/* ---------- contact ---------- */
+.contact{display:grid;justify-items:center;text-align:center;gap:1.4rem;padding-block:5rem 3rem}
+.mailcard{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;justify-content:center;padding:.5rem .5rem .5rem 1.3rem;border-radius:999px;
+  background:var(--glass);border:1px solid var(--glass-edge);box-shadow:inset 0 1px 0 var(--glass-edge),var(--glass-shadow)}
+.mailcard code{font-family:var(--f-mono);font-size:1rem;user-select:all}
+.btn{font:inherit;font-size:.9rem;font-weight:500;border:0;border-radius:999px;background:#1E1E21;color:#fff;padding:.6rem 1.2rem;cursor:pointer}
+.note{font-size:.82rem;color:var(--muted);max-width:30rem}
+footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:1.5rem 2rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+
+.cta{text-decoration:none;margin-top:.8rem;padding:.75rem 1.5rem}
+@media (max-width:860px){
+  .shelf.c4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .approach{grid-template-columns:minmax(0,1fr)}
+  .panel{grid-template-columns:minmax(0,1fr);gap:1.2rem}
+  .era{grid-template-columns:1.2rem minmax(0,1fr);gap:.8rem}
+  .era .when{grid-column:2;grid-row:1;text-align:left;padding-top:0;margin-top:.2rem}
+  .era .rail{grid-column:1;grid-row:1/3}
+  .era .card{grid-column:2}
+  .era .rail::after{top:.45rem}
+  .era:first-child .rail::before{top:.45rem}
+  .era:last-child .rail::before{height:.45rem}
+}
+@media (max-width:600px){
+  .choose,.shelf.c3,.shelf.c4{grid-template-columns:minmax(0,1fr)}
+  .choose{gap:2.5rem}
+  .drawer .meta{flex-direction:column;gap:.1rem}
+  .drawer .meta p{text-align:left}
+  nav a{padding:.35rem .5rem;font-size:.85rem}
+  nav a.wide{display:none}
+  .bar{padding-left:1rem}
+  .tenet,.kit .row2{grid-template-columns:minmax(0,1fr);gap:.2rem}
+  .ev li{grid-template-columns:minmax(0,1fr);gap:.1rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (prefers-reduced-motion:no-preference){
+  .hero .paper{animation:deal 1s cubic-bezier(.2,.8,.2,1) both}
+  .hero .paper:nth-child(2){animation-delay:.12s}.hero .paper:nth-child(3){animation-delay:.24s}
+  @keyframes deal{from{translate:0 18%}to{translate:0 0}}
+  .view{animation:fade .5s ease both}
+  @keyframes fade{from{translate:0 8px}to{translate:0 0}}
+}
+</style>
 </head>
 <body>
-  <header class="nav">
-    <a href="#" class="logo">Benjamapal</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#works">Works</a>
+<header>
+  <div class="wrap bar">
+    <a class="mark" href="#top">BENJAMAPON</a>
+    <nav aria-label="Main">
+      <a href="#explore">Explore</a>
+      <a href="#screen">On air</a>
+      <a href="#approach" class="wide">Approach</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section class="hero">
-      <p class="eyebrow">สวัสดีค่ะ 👋</p>
-      <h1>ฉันชื่อ Benjamapal</h1>
-      <p class="lead">ยินดีต้อนรับสู่พื้นที่รวบรวมผลงานของฉัน</p>
-      <a href="#works" class="btn">ดูผลงาน</a>
-    </section>
+<main class="wrap" id="top">
+  <section class="hero">
+    <div class="folder on" id="heroFolder" aria-hidden="true">
+      <div class="back"></div>
+      <div class="papers">
+        <div class="paper" style="--tint:var(--t-lead)"><span>Product &amp; Project</span></div>
+        <div class="paper" style="--tint:var(--t-design)"><span>Organic Growth</span></div>
+        <div class="paper" style="--tint:var(--t-people)"><span>TV &amp; Podcast</span></div>
+      </div>
+      <div class="front">
+        <span class="lab">*OPAL, IN FOLDERS.</span>
+        <div class="foot"><span></span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
+      </div>
+    </div>
+    <h1>BENJAMAPON</h1>
+    <span class="pill">Opal · Bangkok</span>
+    <p class="role">Product Owner + Project Manager</p>
+    <p class="sub">I own products end to end and grow them <em class="s">organically</em>, through SEO, conversion work and steady experimentation. Before product, I produced and hosted TV documentaries and podcasts, so I start every brief with the story.</p>
+    <div class="facts">
+      <div class="fact"><b>7+</b><span>years in product &amp; media</span></div>
+      <div class="fact"><b>30+</b><span>growth experiments run</span></div>
+      <div class="fact"><b>77</b><span>TV &amp; podcast episodes</span></div>
+    </div>
+    <a class="btn cta" href="#explore">Explore Opal ↓</a>
+  </section>
 
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>เขียนแนะนำตัวสั้น ๆ ที่นี่ — ทักษะ ความสนใจ และสิ่งที่กำลังทำอยู่</p>
-    </section>
+  <section class="block" id="explore">
+    <div class="head">
+      <div><p class="label">Explore Opal</p><h2>How would you like <em class="s">to look around?</em></h2></div>
+      <p>Follow the career year by year, or open a folder for each craft. You can switch any time.</p>
+    </div>
+    <div class="choose" role="group" aria-label="Choose how to explore">
+      <button type="button" class="drawer" data-mode="time" aria-pressed="true">
+        <div class="folder on" style="--tint:var(--t-learn)">
+          <div class="back"></div>
+          <div class="papers">
+            <div class="paper" style="--tint:var(--t-voice)"><span>2018 · Podcast &amp; TV</span></div>
+            <div class="paper" style="--tint:var(--t-learn)"><span>2022 · FlowAccount</span></div>
+            <div class="paper" style="--tint:var(--t-lead)"><span>2026 · Jenosize</span></div>
+          </div>
+          <div class="front"><span class="lab">*BY TIME.</span><div class="foot"><span class="pill">2015 — now</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></div>
+        </div>
+        <div class="meta"><h3>By time</h3><p>Every role, newest first</p></div>
+      </button>
+      <button type="button" class="drawer" data-mode="skill" aria-pressed="false">
+        <div class="folder" style="--tint:var(--t-design)">
+          <div class="back"></div>
+          <div class="papers">
+            <div class="paper" style="--tint:var(--t-people)"><span>Communication Arts</span></div>
+            <div class="paper" style="--tint:var(--t-design)"><span>Tech Product</span></div>
+            <div class="paper" style="--tint:var(--t-lead)"><span>SEO · CRO</span></div>
+          </div>
+          <div class="front"><span class="lab">*BY SKILL.</span><div class="foot"><span class="pill">2 fields · 7 skills</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div></div>
+        </div>
+        <div class="meta"><h3>By skill</h3><p>Communication Arts and Tech Product</p></div>
+      </button>
+    </div>
 
-    <section id="works" class="section">
-      <h2>Works</h2>
-      <div class="grid" id="works-grid"></div>
-    </section>
+    <div class="seg"><div role="group" aria-label="Explore mode">
+      <button type="button" data-mode="time" aria-pressed="true">By time</button>
+      <button type="button" data-mode="skill" aria-pressed="false">By skill</button>
+    </div></div>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>อีเมล: <a href="mailto:you@example.com">you@example.com</a></p>
-    </section>
-  </main>
+    <div class="view" id="timeView"><ol class="timeline" id="timeline"></ol></div>
+    <div class="view" id="skillView" hidden></div>
+  </section>
 
-  <footer>© <span id="year"></span> Benjamapal</footer>
-  <script src="script.js"></script>
+  <section class="block" id="screen">
+    <div class="head">
+      <div><p class="label">On screen &amp; on air</p><h2>Hosting, <em class="s">episode by episode.</em></h2></div>
+      <p>Eight programmes across Thai PBS, NBT, YouTube and podcast. Pick a programme, then open any episode.</p>
+    </div>
+    <div class="progs" id="progs" role="group" aria-label="Choose a programme"></div>
+    <div class="proginfo" id="proginfo" aria-live="polite"></div>
+    <div class="reel-bar">
+      <span class="count" id="reelCount"></span>
+      <div class="nav2"><button type="button" id="prev" aria-label="Previous episodes">←</button><button type="button" id="next" aria-label="Next episodes">→</button></div>
+    </div>
+    <div class="track" id="track" tabindex="0" aria-label="Episodes"></div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+  </section>
+
+  <section class="block" id="approach">
+    <div class="approach">
+      <div><p class="label">Approach</p><h2>A storyteller’s instinct, <em class="s">a metrics mind.</em></h2></div>
+      <div class="tenets">
+        <div class="tenet"><h3>Insight to outcome</h3><p>Turn what users say and do into a roadmap, then into results that can be measured.</p></div>
+        <div class="tenet"><h3>Test, don’t guess</h3><p>Hypothesis, success metric, rollout plan. Then let the experiment decide.</p></div>
+        <div class="tenet"><h3>Hold the whole timeline</h3><p>Phases, dependencies, risks and stakeholders, kept in one view so delivery stays on schedule.</p></div>
+        <div class="tenet"><h3>Lead with story</h3><p>Years of interviewing founders taught me to listen first. It is the best discovery tool I own.</p></div>
+      </div>
+      <div class="kit" aria-label="Toolkit">
+        <p class="label">Toolkit</p>
+        <div class="row2"><h3>Product &amp; delivery</h3><div class="tags"><span>Roadmaps &amp; OKRs</span><span>Agile / Scrum</span><span>User stories</span><span>UAT &amp; cutover</span><span>Jira</span><span>Confluence</span><span>Asana</span><span>Figma</span></div></div>
+        <div class="row2"><h3>Growth</h3><div class="tags"><span>CRO</span><span>A/B testing</span><span>GrowthBook</span><span>Technical SEO</span><span>Ahrefs</span><span>SEMrush</span><span>Search Console</span></div></div>
+        <div class="row2"><h3>Analytics</h3><div class="tags"><span>GA4</span><span>Looker Studio</span><span>Hotjar</span><span>Clarity</span><span>Funnel analysis</span></div></div>
+        <div class="row2"><h3>Platforms</h3><div class="tags"><span>CRM</span><span>Master data</span><span>SSO / CIAM</span><span>CDP</span><span>PDPA consent</span></div></div>
+        <div class="row2"><h3>Languages</h3><div class="tags"><span>Thai (native)</span><span>English (professional)</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <p class="label">Contact</p>
+    <h2>Building something <em class="s">worth growing?</em></h2>
+    <div class="mailcard">
+      <code id="email">benjamapon.f@gmail.com</code>
+      <button class="btn" id="copy" type="button">Copy email</button>
+    </div>
+    <p class="note">Based in Bangkok, Thailand.</p>
+  </section>
+
+  <footer><span>© <span id="yr"></span> Benjamapon Faijaree</span><span>Collected works</span></footer>
+</main>
+
+<script>
+/* ===== Edit content here ===== */
+const SKILLS = {
+  host:    {group:"comm", name:"Host", sub:"TV / Program", tint:"--t-people",
+            sum:"On camera and on mic, drawing out founders’ stories through long-form executive interviews."},
+  ads:     {group:"comm", name:"Ads / Music Video", sub:"Production", tint:"--t-voice",
+            sum:"Commercial and music-video production work.", empty:true},
+  podcast: {group:"comm", name:"Podcast", sub:"Producer / Host / Editor", tint:"--t-lead",
+            sum:"Independent series built end to end: guest negotiation, planning, recording, editing and distribution."},
+  seo:     {group:"tech", name:"SEO", sub:"Organic search", tint:"--t-design",
+            sum:"Landing-page ecosystems and technical SEO that grow organic visibility and tie rankings to revenue."},
+  cro:     {group:"tech", name:"CRO", sub:"Experimentation", tint:"--t-learn",
+            sum:"Hypothesis-led A/B and multivariate testing that moves organic sign-ups and trial-to-paid conversion."},
+  po:      {group:"tech", name:"Product Owner", sub:"Discovery to delivery", tint:"--t-lead",
+            sum:"Owning roadmaps end to end and leading cross-functional Agile squads from insight to measurable result."},
+  pm:      {group:"tech", name:"Project Manager", sub:"Timelines & stakeholders", tint:"--t-voice",
+            sum:"Holding scope, timeline, risk and every stakeholder in one view so complex delivery lands on schedule."}
+};
+const GROUPS = {
+  comm:{name:"Communication Arts", note:"Where the storytelling comes from"},
+  tech:{name:"Tech Product", note:"Where it turns into growth"}
+};
+const ERAS = [
+  {id:"jenosize", when:"Mar 2026 — Now", now:true, title:"Product Owner & Project Manager", org:"Jenosize · Digital and AI Transformation",
+   points:[
+     ["CRM Core Platform","Project Manager for an FMCG enterprise client: master data, SSO and CDP integration, from scope and specs to UAT and cutover."],
+     ["HappyWork","Product Owner for an HR management SaaS, from discovery and market research to roadmap and delivery."],
+     ["AI Employee","Product Owner for AI agents that work inside LINE, Teams and Discord, with workflow automation for internal teams."]],
+   skills:["pm","po"], tags:["Agile / Scrum","CRM","SSO / CIAM","CDP","PDPA consent"]},
+  {id:"cro", when:"Jul 2023 — Feb 2026", title:"Product Owner, Conversion Rate Optimisation", org:"FlowAccount · Bangkok",
+   points:[
+     ["CRO roadmap","Owned the vision and quarterly roadmap, tied to acquisition and retention OKRs."],
+     ["30+ experiments","A/B and multivariate tests across landing pages, onboarding flows and CTAs."],
+     ["GrowthBook framework","Built and institutionalised it across UX, engineering and marketing."],
+     ["Live dashboards","Looker Studio funnels with Hotjar and Clarity behaviour data for stakeholders."]],
+   skills:["cro","po"], tags:["GrowthBook","Looker Studio","Hotjar","Clarity","Scrum"]},
+  {id:"seo", when:"Jun 2022 — Jun 2023", title:"Product Owner, Landing Page & SEO", org:"FlowAccount · Bangkok",
+   points:[
+     ["Landing page ecosystem","Full ownership and SEO-driven acquisition strategy across core and add-on products."],
+     ["Technical SEO","Core Web Vitals, schema markup and internal linking that improved organic rankings."],
+     ["SEO to revenue","GA4 and Ahrefs dashboards linking rankings and CTR to page-level conversion."]],
+   skills:["seo","po"], tags:["GA4","Ahrefs","SEMrush","Search Console"]},
+  {id:"writer", when:"Jul 2021 — May 2022", title:"Writer & Creative", org:"FlowAccount · Bangkok",
+   points:[
+     ["Product content","Strategy for onboarding, feature education and lifecycle nurture."],
+     ["Video walkthroughs","Scripted and produced how-to videos, iterated on engagement data."],
+     ["Domain depth","Learned accounting SaaS inside out, the base for later product roles."]],
+   skills:[], tags:["Content strategy","Scriptwriting","Video"]},
+  {id:"media", when:"Oct 2018 — Apr 2023", title:"Podcast Producer & Host", org:"Freelance · Various productions",
+   points:[
+     ["45-episode podcast","Entrepreneurship and SME business stories, produced and hosted independently."],
+     ["32-episode TV documentary","Founders and small businesses, from planning to final cut."],
+     ["End-to-end production","Stakeholder negotiation, planning, recording, editing and distribution."]],
+   skills:["podcast","host","pm"], tags:["Executive interviewing","Storytelling"]},
+  {id:"edu", when:"2015 — 2019", title:"Bachelor of Communication Arts", org:"Silpakorn University · Second Class Honours",
+   points:[["Faculty of ICT","The grounding in media, communication and audience behind everything since."]],
+   skills:[], tags:["Communication Arts"]}
+];
+/* Evidence shown inside each skill folder: [era id, title, line] */
+const EVIDENCE = {
+  host:   [["media","สะเทือนไทย · Thai PBS","Host of 32 documentary episodes, 2018–2021.","sathuan"],
+           ["media","The O Idol · มนุษย์ต่างวัย","Host of 20 episodes on inspiring older people, supported by the Thai Media Fund.","oidol"],
+           ["media","สุขใจไทยแลนด์ · NBT","Host of green-community episodes, 2020.","sukjai"],
+           ["media","ท่องเที่ยวปลอดบุหรี่","Research, script, coordination and hosting for a smoke-free campaign.","smokefree"],
+           ["writer","FlowAccount on YouTube","Presenter of tutorials, Happy Business Story and คลับนักบัญชี.","tutorial"]],
+  ads:    [],
+  podcast:[["media","Flavor of Hometown · Thai PBS Podcast","Made alone, end to end: concept, interviews, script, editing and cover art. 60 episodes.","flavor"],
+           ["media","Podcast series, 45 episodes","Producer, host and editor. Recording, editing and distribution handled end to end."]],
+  seo:    [["seo","Landing page & SEO portfolio","Grew organic search visibility across multiple product lines."],
+           ["seo","Technical SEO","Core Web Vitals, schema markup and internal linking."],
+           ["cro","Organic acquisition","CRO work that lifted organic sign-ups."]],
+  cro:    [["cro","CRO product roadmap","Improved organic acquisition and trial-to-paid conversion."],
+           ["cro","30+ experiments","Landing pages, onboarding flows and CTAs."],
+           ["cro","GrowthBook framework","Adopted across UX, engineering and marketing."]],
+  po:     [["jenosize","HappyWork","HR management SaaS, owned end to end."],
+           ["jenosize","AI Employee","AI-workforce platform on LINE, Teams and Discord."],
+           ["cro","CRO at FlowAccount","Quarterly roadmap and a Scrum squad on a two-week cadence."],
+           ["seo","Landing page & SEO","Backlog of quick wins and structural improvements."]],
+  pm:     [["jenosize","CRM Core Platform","Master timeline, risks, change requests and steering-committee updates."],
+           ["media","Independent productions","77 episodes delivered across podcast and TV."]]
+};
+/* ============================= */
+
+const $=s=>document.querySelector(s);
+const ARROW=`<span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>`;
+const eraById=Object.fromEntries(ERAS.map(e=>[e.id,e]));
+const short=w=>w.replace(/[A-Za-z]{3} /g,"").replace("Now","now");
+const smooth=()=>matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth";
+$("#yr").textContent=new Date().getFullYear();
+
+let mode="time", openSkill="po";
+
+/* time view */
+$("#timeline").innerHTML=ERAS.map(e=>`
+  <li class="era ${e.now?"now":""}" id="era-${e.id}">
+    <span class="when">${e.when}</span><span class="rail" aria-hidden="true"></span>
+    <article class="card">
+      <p class="org">${e.org}</p>
+      <h3>${e.title}</h3>
+      <ul>${e.points.map(([b,t])=>`<li><b>${b}.</b> ${t}</li>`).join("")}</ul>
+      <div class="tags">${e.skills.map(k=>`<button type="button" data-skill="${k}">${SKILLS[k].name}</button>`).join("")}${e.tags.map(t=>`<span>${t}</span>`).join("")}</div>
+    </article>
+  </li>`).join("");
+
+/* skill view */
+function renderSkills(){
+  $("#skillView").innerHTML=Object.entries(GROUPS).map(([g,G])=>{
+    const ks=Object.keys(SKILLS).filter(k=>SKILLS[k].group===g);
+    const panel = SKILLS[openSkill].group===g ? renderPanel(openSkill) : "";
+    return `<div class="group">
+      <div class="group-head"><h3>${G.name}</h3><p>${G.note}</p></div>
+      <div class="shelf c${ks.length}">${ks.map(k=>{
+        const S=SKILLS[k], ev=EVIDENCE[k], on=k===openSkill;
+        const papers=(ev.length?ev:[[0,"Coming soon"],[0,""],[0,""]]).slice(0,3)
+          .map(x=>`<div class="paper" style="--tint:var(${S.tint})"><span>${x[1]}</span></div>`).join("");
+        return `<button type="button" class="drawer ${S.empty?"empty-folder":""}" data-skill="${k}" aria-pressed="${on}">
+          <div class="folder ${on?"on":""}"><div class="back"></div><div class="papers">${papers}</div>
+            <div class="front"><span class="lab">*${S.name.toUpperCase()}.</span><div class="foot"><span class="pill">${ev.length?ev.length+" "+(ev.length>1?"works":"work"):"Add work"}</span>${ARROW}</div></div></div>
+          <div class="meta"><h3>${S.name}</h3><span>${S.sub}</span></div>
+        </button>`;}).join("")}</div>
+      ${panel}
+    </div>`;}).join("");
+}
+function renderPanel(k){
+  const S=SKILLS[k], ev=EVIDENCE[k];
+  return `<div class="panel" id="panel" aria-live="polite">
+    <div><p class="label">${GROUPS[S.group].name}</p><h4>${S.name}</h4><p class="sub">${S.sub}</p><p class="sum">${S.sum}</p></div>
+    ${ev.length?`<ul class="ev">${ev.map(([id,t,l,pg])=>`<li><span class="y">${short(eraById[id].when)}</span>
+      <div><b>${t}</b><p>${l}</p>${pg?`<button type="button" data-prog="${pg}">Watch the episodes →</button>`:`<button type="button" data-era="${id}">See it in the timeline →</button>`}</div></li>`).join("")}</ul>`
+      :`<p class="placeholder">Ads and music-video work will be filed here. Send the titles, years and roles and they will appear in this folder.</p>`}
+  </div>`;
+}
+
+function setMode(m,scroll){
+  mode=m;
+  document.querySelectorAll("[data-mode]").forEach(b=>{
+    const on=b.dataset.mode===m; b.setAttribute("aria-pressed",on);
+    b.querySelector(".folder")?.classList.toggle("on",on);
+  });
+  $("#timeView").hidden=m!=="time"; $("#skillView").hidden=m!=="skill";
+  if(m==="skill") renderSkills();
+  try{localStorage.setItem("opal-mode",m)}catch(e){}
+  if(scroll) $(".seg").scrollIntoView({behavior:smooth(),block:"start"});
+}
+function openSkillPanel(k){
+  openSkill=k; setMode("skill",false);
+  requestAnimationFrame(()=>$("#panel").scrollIntoView({behavior:smooth(),block:"center"}));
+}
+document.querySelectorAll("[data-mode]").forEach(b=>b.addEventListener("click",()=>setMode(b.dataset.mode,true)));
+$("#timeline").addEventListener("click",e=>{const b=e.target.closest("[data-skill]"); if(b) openSkillPanel(b.dataset.skill);});
+$("#skillView").addEventListener("click",e=>{
+  const d=e.target.closest(".drawer"); if(d){openSkillPanel(d.dataset.skill);return;}
+  const g=e.target.closest("[data-prog]"); if(g){showProgramme(g.dataset.prog);return;}
+  const j=e.target.closest("[data-era]"); if(j){setMode("time",false);
+    const el=document.getElementById("era-"+j.dataset.era); el.scrollIntoView({behavior:smooth(),block:"start"});}
+});
+$("#copy").addEventListener("click",async e=>{
+  const b=e.currentTarget;
+  try{await navigator.clipboard.writeText($("#email").textContent);b.textContent="Copied";}
+  catch{const r=document.createRange();r.selectNodeContents($("#email"));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected. Press Ctrl+C";}
+  setTimeout(()=>b.textContent="Copy email",2200);
+});
+
+/* ===== On screen & on air: programmes and episodes ===== */
+const PROGRAMMES = [
+{
+"id": "sathuan",
+"name": "สะเทือนไทย",
+"en": "Sathuan Thai",
+"channel": "Thai PBS",
+"role": "Host",
+"years": "2018 — 2021",
+"tint": "--t-people",
+"note": "Documentary programme on people changing their communities.",
+"eps": [
+{
+"t": "อีหล่า",
+"d": "#โชว์ห่วยNeverDie",
+"date": "2018-10-21",
+"url": "https://www.youtube.com/watch?v=ueoRSzCn4kA&t=926s"
+},
+{
+"t": "ซาบะ",
+"d": "#มนุษย์ล้อสายฮาร์ดคอร์",
+"date": "2018-11-25",
+"url": "https://www.youtube.com/watch?v=mZZl02aIbFM"
+},
+{
+"t": "มล",
+"d": "#ถิ่นนิยมจงเจริญ",
+"date": "2018-12-02",
+"url": "https://www.youtube.com/watch?v=uJS8ck8O33c&t=776s"
+},
+{
+"t": "หมอวัฒน์",
+"d": "#เราเป็นหมอได้ทุกคน",
+"date": "2018-12-16",
+"url": "https://www.youtube.com/watch?v=w8Ai-ue_nN8&t=1232s"
+},
+{
+"t": "ฮักมี",
+"d": "#อินทรีย์แก๊งสเตอร์",
+"date": "2018-12-29",
+"url": "https://www.youtube.com/watch?v=_FfJrPLC09E"
+},
+{
+"t": "แม่ราตรีศรีวิไล",
+"d": "#หมอลำหัวใจใหม่",
+"date": "2019-01-06",
+"url": "https://www.youtube.com/watch?v=vQC1qBYGy28"
+},
+{
+"t": "ยิว",
+"d": "#บันทึกจากวีลแชร์",
+"date": "2019-01-12",
+"url": "https://www.youtube.com/watch?v=HuPCHhJ7JAg"
+},
+{
+"t": "ตุ๊หล่าง",
+"d": "#เมล็ดพันธุ์คือชีวิต",
+"date": "2019-06-03",
+"url": "https://www.youtube.com/watch?v=kXjm40nmgcE"
+},
+{
+"t": "อรุณ",
+"d": "#ความงามบนความตาย",
+"date": "2019-10-01",
+"url": "https://www.youtube.com/watch?v=qPLJjLtUr4Q&t=1393s"
+},
+{
+"t": "แมงกุดจี่เรนเจอร์",
+"d": "#ตบให้ไกลไปให้ถึงฝัน",
+"date": "2019-11-12",
+"url": "https://www.youtube.com/watch?v=rDOUk6WvUV8&t=244s"
+},
+{
+"t": "วิจัย อัมราลิขิต",
+"d": "#นายกเทศมนตรีผู้เนรมิตเมืองน่าอยู่อย่างยั่งยืน",
+"date": "2019-12-03",
+"url": "https://www.youtube.com/watch?v=EnRoT5OdCHk&t=415s"
+},
+{
+"t": "เฉลียว ยันสาด",
+"d": "#นักสู้แห่งบึงวงฆ้อง",
+"date": "2019-12-10",
+"url": "https://www.youtube.com/watch?v=K4kqUK1Lbnw"
+},
+{
+"t": "หมอนิล",
+"d": "#ระบบสุขภาพชุมชนในฝัน",
+"date": "2019-12-31",
+"url": "https://www.youtube.com/watch?v=8tBEVGrjg_s&t=1270s"
+},
+{
+"t": "กองปราบเชื้อดื้อยา",
+"d": "",
+"date": "2020-01-21",
+"url": "https://www.youtube.com/watch?v=BuGQauJa0h4&t=908s"
+},
+{
+"t": "Best Buddies",
+"d": "#เพื่อนที่แสนดี",
+"date": "2020-01-28",
+"url": "https://www.youtube.com/watch?v=PvjqoFqfn9g"
+},
+{
+"t": "Pakasai Resort",
+"d": "#ที่พักรักษ์โลก",
+"date": "2020-02-18",
+"url": "https://www.youtube.com/watch?v=IQk0FovHlmw"
+},
+{
+"t": "ขยะเมืองท่องเที่ยว",
+"d": "",
+"date": "2020-03-10",
+"url": "https://www.youtube.com/watch?v=oP-kBjx-ATU"
+},
+{
+"t": "ขยะในงานอีเวนต์",
+"d": "",
+"date": "2020-04-16",
+"url": "https://www.youtube.com/watch?v=gGHMnNhDNVs"
+},
+{
+"t": "เอี่ยมดีรีไซเคิล",
+"d": "#นักจัดการขยะเพื่อสังคม",
+"date": "2020-06-30",
+"url": "https://www.youtube.com/watch?v=5ZsqE4kq-_Q"
+},
+{
+"t": "ตาลำพัน",
+"d": "#คนเพี้ยนเซียนผักหวาน",
+"date": "2020-08-18",
+"url": "https://www.youtube.com/watch?v=XWfdi4Pi0Rc"
+},
+{
+"t": "ปัถวีโมเดล",
+"d": "",
+"date": "2020-09-01",
+"url": "https://www.youtube.com/watch?v=VKdhISAn7z0"
+},
+{
+"t": "กาแฟเดอม้ง",
+"d": "",
+"date": "2020-09-22",
+"url": "https://www.youtube.com/watch?v=ewgZjXgzhIM"
+},
+{
+"t": "คลาสเรียนในบ้าน",
+"d": "",
+"date": "2020-09-29",
+"url": "https://www.youtube.com/watch?v=pEu4ciceCQk"
+},
+{
+"t": "แดดจัดน้ำแล้ง",
+"d": "",
+"date": "2020-10-06",
+"url": "https://www.youtube.com/watch?v=5MWeBLYpRII&t=150s"
+},
+{
+"t": "แวรุง ไปไหน",
+"d": "",
+"date": "2021-01-12",
+"url": "https://www.youtube.com/watch?v=Wq1KroWLSZs"
+},
+{
+"t": "หลาดใต้โหนด",
+"d": "",
+"date": "2021-01-19",
+"url": "https://www.youtube.com/watch?v=ZpqToS-rPKA"
+},
+{
+"t": "โรงเรียนรวมฮีโร่",
+"d": "",
+"date": "2021-02-02",
+"url": "https://www.youtube.com/watch?v=Gw3Nghb2VYQ"
+},
+{
+"t": "ผู้ใหญ่บ้านสร้างยิ้ม",
+"d": "",
+"date": "2021-02-09",
+"url": "https://www.youtube.com/watch?v=3_oKsogD2ec"
+},
+{
+"t": "นักกายภาพบำบัด",
+"d": "",
+"date": "2021-03-09",
+"url": "https://www.youtube.com/watch?v=ZQdBR2Neh_s"
+},
+{
+"t": "ขยะลอแอะ",
+"d": "",
+"date": "2021-03-16",
+"url": "https://www.youtube.com/watch?v=JDGMK-O-sLM"
+},
+{
+"t": "สายรุ้งวิทยา",
+"d": "",
+"date": "2021-03-30",
+"url": "https://www.youtube.com/watch?v=AW6-Fv9Cths"
+},
+{
+"t": "สิริเมืองพร้าว",
+"d": "",
+"date": "2021-04-13",
+"url": "https://www.youtube.com/watch?v=qSQLpvsmxZk"
+}
+]
+},
+{
+"id": "oidol",
+"name": "The O Idol",
+"en": "The O Idol",
+"channel": "YouTube · มนุษย์ต่างวัย",
+"role": "Host",
+"years": "2019 — 2020",
+"tint": "--t-lead",
+"note": "Stories of inspiring older people. Supported by the Thai Media Fund.",
+"eps": [
+{
+"t": "ป้าเจี๊ยบ นงลักษณ์ ชัยฤทธิไชย",
+"d": "นักสเก็ตบอร์ดทีมชาติไทยวัย 62 ปี",
+"date": "2019-10-09",
+"url": "https://www.youtube.com/watch?v=fF1pAlG2xfQ&t=266s"
+},
+{
+"t": "เจ๊กโจ่ย",
+"d": "หัวหน้าแก๊งแบดมินตันย่านวงเวียนใหญ่ วัย 74 ปี",
+"date": "2019-10-16",
+"url": "https://www.youtube.com/watch?v=YxzGj7cvHiM&t=539s"
+},
+{
+"t": "กนกพร สุภิมาส",
+"d": "บล็อกเกอร์สายเที่ยว @สูงวัยลุยไปทั่ว วัย 62 ปี",
+"date": "2019-10-24",
+"url": "https://www.youtube.com/watch?v=DyZj0PGPhFU&t=244s"
+},
+{
+"t": "ลุงอ้วน",
+"d": "นักไตรกีฬา Ironman วัย 67 ปี",
+"date": "2019-11-10",
+"url": "https://www.youtube.com/watch?v=rgortMyxszY&t=436s"
+},
+{
+"t": "ป้าเหงี่ยม",
+"d": "ครูช่างศิลปหัตกรรม สู่ธุรกิจผ้าหม้อห้อม",
+"date": "2019-11-24",
+"url": "https://www.youtube.com/watch?v=I1n8GEOg0ss&t=266s"
+},
+{
+"t": "สวนผักหลังบ้าน",
+"d": "ของคุณหมอนักปลูกผัก",
+"date": "2019-12-15",
+"url": "https://www.youtube.com/watch?v=pMKB2VAxNxw&t=199s"
+},
+{
+"t": "ลุงหมึก ชำนาญ มณีวงษ์",
+"d": "ภูผาตาดโฮมสเตย์",
+"date": "2020-01-12",
+"url": "https://www.youtube.com/watch?v=k2emj9kjGv8&t=591s"
+},
+{
+"t": "ลุงไพบูลย์",
+"d": "เฟรชชี่รุ่นคุณปู่ วัย 75 ปี",
+"date": "2020-01-19",
+"url": "https://www.youtube.com/watch?v=I3quicRWlxM&t=385s"
+},
+{
+"t": "Craft it on",
+"d": "งานคราฟต์จากมือแม่",
+"date": "2020-02-02",
+"url": "https://www.youtube.com/watch?v=p-mdRGn3gpI&t=523s"
+},
+{
+"t": "โกศุภ",
+"d": "นักเล่าเรื่องแห่งเมืองระนอง วัย 65 ปี",
+"date": "2020-02-23",
+"url": "https://www.youtube.com/watch?v=umoV0YmnTeM&t=433s"
+},
+{
+"t": "ป้าลินจง",
+"d": "ช่างภาพพอร์ตเทรต วัย 75 ปี",
+"date": "2020-03-01",
+"url": "https://www.youtube.com/watch?v=MfOWkEym58U&t=227s"
+},
+{
+"t": "คุณตาล้อเดียว",
+"d": "กับเพื่อนซี้วัยประถม",
+"date": "2020-03-15",
+"url": "https://www.youtube.com/watch?v=shgcYwKGfz8&t=382s"
+},
+{
+"t": "ป้าจันสม อานุภาพ",
+"d": "เปลี่ยนที่ดินรกร้างเป็นสวนสมุนไพร",
+"date": "2020-03-22",
+"url": "https://www.youtube.com/watch?v=ZBCvrlPoAWw&t=431s"
+},
+{
+"t": "พ่อปรีชา",
+"d": "วีรบุรุษพิทักษ์ป่า",
+"date": "2020-04-05",
+"url": "https://www.youtube.com/watch?v=9CW0cAS5S0s&t=434s"
+},
+{
+"t": "ลุงณรงค์",
+"d": "ปราชญ์ชาวบ้านแชมป์ว่าว 7 สมัย วัย 73 ปี",
+"date": "2020-06-14",
+"url": "https://www.youtube.com/watch?v=4f3kVsBzguw&t=355s"
+},
+{
+"t": "พ่อใหญ่อำไพ",
+"d": "รถส้มตำตุ๊กตุ๊กสีแดงคันเดียวในหาดใหญ่",
+"date": "2020-07-01",
+"url": "https://www.youtube.com/watch?v=1Dy9fPRd9Po"
+},
+{
+"t": "ลุงอำนาจ",
+"d": "นักวิ่งแนวดิ่ง วัย 67 ปี",
+"date": "2020-07-14",
+"url": "https://www.youtube.com/watch?v=4n-49WxxGsg&t=215s"
+},
+{
+"t": "ป้ากล้อง",
+"d": "วิชาถ่ายภาพนกที่สอนให้รู้จักการรอคอย",
+"date": "2020-08-03",
+"url": "https://www.youtube.com/watch?v=wq1GMsLp7AA&t=282s"
+},
+{
+"t": "พี่จิ๋ม",
+"d": "วิ่งเทรลแบบเป๊ะปัง นักวิ่งเทรลวัย 50+",
+"date": "2020-08-20",
+"url": "https://www.youtube.com/watch?v=jQu7CEGE9-g&t=217s"
+},
+{
+"t": "ลุงสนั่น เลื่อนแป้น",
+"d": "โฮมสเตย์สุดอินดี้แห่งบ้านปากประ พัทลุง",
+"date": "2020-08-25",
+"url": "https://www.youtube.com/watch?v=gucKn14PLUQ"
+}
+]
+},
+{
+"id": "sukjai",
+"name": "สุขใจไทยแลนด์",
+"en": "Sukjai Thailand",
+"channel": "NBT",
+"role": "Host",
+"years": "2020",
+"tint": "--t-design",
+"note": "Community and green-living stories.",
+"eps": [
+{
+"t": "EP8 หมู่บ้าน Zero Waste",
+"d": "",
+"date": "2020-10-24",
+"url": "https://www.youtube.com/watch?v=rtPertNrJDI&t=920s"
+},
+{
+"t": "EP12 ปฏิบัติการสีเขียวเพื่อเมือง",
+"d": "",
+"date": "2020-11-21",
+"url": "https://www.youtube.com/watch?v=oZQwaIJdk_I"
+}
+]
+},
+{
+"id": "smokefree",
+"name": "ท่องเที่ยวปลอดบุหรี่",
+"en": "Smoke-free Tourism",
+"channel": "มูลนิธิรณรงค์เพื่อการไม่สูบบุหรี่",
+"role": "Research · Script · Coordination · Host",
+"years": "Campaign",
+"tint": "--t-learn",
+"note": "A campaign series on smoke-free public places.",
+"eps": [
+{
+"t": "อุทยานแห่งชาติปลอดควันบุหรี่",
+"d": "หมู่เกาะเภตรา – หมู่เกาะลันตา",
+"date": "",
+"url": "https://www.youtube.com/watch?v=1s-QdM40nKY"
+},
+{
+"t": "ถนนคนเดินปลอดบุหรี่",
+"d": "ตลาดปลอดบุหรี่ จังหวัดเชียงราย",
+"date": "",
+"url": "https://www.youtube.com/watch?v=6r3MxL1Kjrw"
+},
+{
+"t": "สถานีตำรวจปลอดบุหรี่",
+"d": "นโยบายตำรวจภูธรภาค 5",
+"date": "",
+"url": "https://www.youtube.com/watch?v=SVtUmANlCas"
+},
+{
+"t": "วัดปลอดบุหรี่",
+"d": "นโยบายวัดในจังหวัดขอนแก่น",
+"date": "",
+"url": "https://www.youtube.com/watch?v=eRJGY69y5bM"
+}
+]
+},
+{
+"id": "flavor",
+"name": "Flavor of Hometown",
+"en": "Flavor of Hometown",
+"channel": "Thai PBS Podcast",
+"role": "Made end to end, solo",
+"years": "2022",
+"tint": "--t-voice",
+"kind": "Listen",
+"note": "Hometown dishes and the stories behind them. Every episode made by Opal alone, from first idea to finished cover.",
+"solo": ["Concept", "Interviews", "Script", "Editing", "Cover art"],
+"show": "https://podcast.thaipbs.or.th/podcast/flavorofhometown",
+"eps": [
+{
+"t": "เรื่องเล่าจากแกงขนุนสุก",
+"d": "",
+"date": "",
+"url": "https://www.thaipbspodcast.com/podcast/dj/flavorofhometown/story-from-ripe-jackfruit-curry"
+},
+{
+"t": "เรื่องเล่าจากหมูเกาหยุก",
+"d": "",
+"date": "",
+"url": "https://www.thaipbspodcast.com/podcast/dj/flavorofhometown/mei-cai-kou-rou"
+},
+{
+"t": "เรื่องเล่าจากอักปลานิล",
+"d": "",
+"date": "",
+"url": "https://www.thaipbspodcast.com/podcast/dj/flavorofhometown/ak-pla-nill"
+},
+{
+"t": "เรื่องเล่าจากน้ำปู",
+"d": "",
+"date": "",
+"url": "https://www.thaipbspodcast.com/podcast/dj/flavorofhometown/nam-phoo"
+},
+{
+"t": "เรื่องเล่าจากปลาลิ้นหมาทอดน้ำปลา",
+"d": "",
+"date": "",
+"url": "https://www.thaipbspodcast.com/podcast/dj/flavorofhometown/sole-with-fish-sauce"
+},
+{
+"t": "เรื่องเล่าจากแกงผักหละ",
+"d": "",
+"date": "",
+"url": "https://www.thaipbspodcast.com/podcast/dj/flavorofhometown/kaeng-puk-hla"
+},
+{
+"t": "เรื่องเล่าจากหมึกต้มหวาน",
+"d": "",
+"date": "",
+"url": "https://www.thaipbspodcast.com/podcast/dj/flavorofhometown/muek-tom-whan"
+},
+{
+"t": "+53 more episodes",
+"d": "Every episode on Thai PBS Podcast",
+"date": "",
+"url": "https://podcast.thaipbs.or.th/podcast/flavorofhometown"
+}
+]
+},
+{
+"id": "happy",
+"name": "Happy Business Story",
+"en": "Happy Business Story",
+"channel": "YouTube · FlowAccount",
+"role": "Host · Research · Interview · Script",
+"years": "2021 — 2022",
+"tint": "--t-lead",
+"note": "Interviews with Thai small-business owners.",
+"eps": [
+{
+"t": "Happy Business Story",
+"d": "Full playlist · 14 episodes",
+"date": "",
+"url": "https://www.youtube.com/playlist?list=PLe-aEuz0YMiRkgVTKCOfS0G1M1ntGdO8G"
+}
+]
+},
+{
+"id": "club",
+"name": "คลับนักบัญชี",
+"en": "Accountants’ Club",
+"channel": "YouTube · FlowAccount",
+"role": "Host · Research · Script",
+"years": "2021 — 2022",
+"tint": "--t-learn",
+"note": "Monthly topics, each told in 4–7 short episodes.",
+"eps": [
+{
+"t": "คลับนักบัญชี",
+"d": "Full playlist · monthly series",
+"date": "",
+"url": "https://www.youtube.com/playlist?list=PLe-aEuz0YMiQbi1A0ldlFPQLWtSQxu5Lb"
+}
+]
+},
+{
+"id": "tutorial",
+"name": "FlowAccount Tutorials",
+"en": "FlowAccount Tutorials",
+"channel": "YouTube · FlowAccount",
+"role": "Presenter",
+"years": "2021 — 2022",
+"tint": "--t-design",
+"note": "How-to videos for FlowAccount on web and iOS.",
+"eps": [
+{
+"t": "สมัครใช้งาน FlowAccount",
+"d": "",
+"date": "",
+"url": "https://www.youtube.com/watch?v=vf4mv9bKkCI&t=14s"
+},
+{
+"t": "ตั้งค่าข้อมูลธุรกิจ",
+"d": "",
+"date": "",
+"url": "https://www.youtube.com/watch?v=W2YyycXV61s"
+},
+{
+"t": "เพิ่มโลโก้ ตรายาง และลายเซ็น",
+"d": "",
+"date": "",
+"url": "https://www.youtube.com/watch?v=cWrHHtdsS2k&t=14s"
+},
+{
+"t": "เพิ่มผู้ใช้งาน",
+"d": "",
+"date": "",
+"url": "https://www.youtube.com/watch?v=mx-BaMxODAw"
+},
+{
+"t": "เพิ่มบัญชีธนาคารและช่องทางการเงิน",
+"d": "",
+"date": "",
+"url": "https://www.youtube.com/watch?v=oJbQEbd8HTM"
+},
+{
+"t": "สร้างบัญชีเงินสดย่อย",
+"d": "",
+"date": "",
+"url": "https://www.youtube.com/watch?v=48SqP02Zxlw"
+},
+{
+"t": "ตั้งค่าหัวเอกสารสำหรับแต่ละธุรกิจ",
+"d": "",
+"date": "",
+"url": "https://www.youtube.com/watch?v=fBjl7opUxOc&t=38s"
+},
+{
+"t": "เชื่อมต่อ FlowAccount กับ Lazada",
+"d": "",
+"date": "",
+"url": "https://www.youtube.com/watch?v=jZa9-v8LuOA"
+},
+{
+"t": "นำเข้ารายชื่อและสต็อกสินค้าจาก Excel",
+"d": "",
+"date": "",
+"url": "https://www.youtube.com/watch?v=pZ7sJGL1Pyc"
+},
+{
+"t": "สั่งของเข้าออฟฟิศ ต้องออกเอกสารอะไร",
+"d": "",
+"date": "",
+"url": "https://www.youtube.com/watch?v=va2QuV0jE3s"
+},
+{
+"t": "สั่งซื้อสินค้ามาเติมสต็อก ต้องออกเอกสารอะไร",
+"d": "",
+"date": "",
+"url": "https://www.youtube.com/watch?v=FV6rDQc8WGk"
+},
+{
+"t": "ดาวน์โหลดและสมัครใช้งานแอป",
+"d": "iOS",
+"date": "",
+"url": "https://www.youtube.com/watch?v=a_xWnsnkQNc"
+},
+{
+"t": "ตั้งค่าธุรกิจในแอป",
+"d": "iOS",
+"date": "",
+"url": "https://www.youtube.com/watch?v=9gMAJMenZYY"
+},
+{
+"t": "ตั้งค่าหัวเอกสารบนแอปมือถือ",
+"d": "iOS",
+"date": "",
+"url": "https://www.youtube.com/watch?v=31ILiVUI414"
+},
+{
+"t": "เพิ่มบัญชีธนาคาร พร้อมแนบ QR Code",
+"d": "iOS",
+"date": "",
+"url": "https://www.youtube.com/watch?v=rbqIKdoy7dw"
+}
+]
+}
+];
+/* ======================================================= */
+const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const fmt=d=>{if(!d) return "";const [y,m,dd]=d.split("-");return `${+dd} ${MONTHS[+m-1]} ${y}`;};
+const PLAY=`<span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>`;
+PROGRAMMES.splice(1,0,...PROGRAMMES.splice(PROGRAMMES.findIndex(p=>p.id==="flavor"),1));
+/* Thumbnail: an embedded image if present, otherwise YouTube's own preview (shows wherever the host allows it). */
+const thumbOf=e=>{if(e.thumb) return e.thumb; const m=e.url.match(/v=([\w-]{11})/); return m?`https://i.ytimg.com/vi/${m[1]}/hqdefault.jpg`:"";};
+let prog=PROGRAMMES[0].id;
+function renderReel(){
+  $("#progs").innerHTML=PROGRAMMES.map(P=>`<button type="button" class="prog" data-p="${P.id}" aria-pressed="${P.id===prog}">${P.name}<i>${P.id==="flavor"?60:P.id==="happy"?14:P.eps.length}</i></button>`).join("");
+  const P=PROGRAMMES.find(x=>x.id===prog);
+  $("#proginfo").innerHTML=`<div><h3>${P.name}${P.en!==P.name?`<em>${P.en}</em>`:""}</h3><p>${P.note}</p></div>
+    <dl><div><dt>Channel</dt><dd>${P.channel}</dd></div><div><dt>Role</dt><dd>${P.role}</dd></div><div><dt>Aired</dt><dd>${P.years}</dd></div></dl>
+    ${P.solo?`<div class="solo"><span class="badge">Solo production</span>${P.solo.map(x=>`<span>${x}</span>`).join("")}${P.show?`<a href="${P.show}" target="_blank" rel="noopener">Listen to the full show ↗</a>`:""}</div>`:""}`;
+  $("#track").innerHTML=P.eps.map((e,i)=>{
+    const playlist=e.url.includes("playlist")||e.t.startsWith("+");
+    const label=playlist?"Playlist":(P.kind||"Watch");
+    return `<a class="clip" href="${e.url}" target="_blank" rel="noopener" aria-label="${e.t} ${e.d} (opens in a new tab)">
+      <div class="thumb"><div class="img" style="--tint:var(${P.tint})">${thumbOf(e)?`<img class="cover" src="${thumbOf(e)}" alt="" loading="lazy" onload="this.closest('.thumb').classList.add('has-img')" onerror="this.remove()">`:""}
+        <div class="ep"><span>${playlist?"SERIES":"EP "+String(i+1).padStart(2,"0")}</span><span>${fmt(e.date)}</span></div>
+        <span class="num" aria-hidden="true">${playlist?"↗":String(i+1).padStart(2,"0")}</span>
+        <div><h4>${e.t}</h4>${e.d?`<p class="d">${e.d}</p>`:""}</div></div>
+        <div class="glassbar"><span class="kind">${label} · ${P.channel.replace("YouTube · ","")}</span>${PLAY}</div></div>
+    </a>`;}).join("");
+  $("#track").scrollLeft=0;
+  $("#reelCount").textContent=`${P.eps.length} ${P.eps.length===1?"link":"episodes"} · opens on ${P.kind==="Listen"?"Thai PBS Podcast":"YouTube"}`;
+  updateReel();
+}
+function stepW(){const t=$("#track"),c=t.querySelector(".clip");return c?c.getBoundingClientRect().width+parseFloat(getComputedStyle(t).columnGap||0):1}
+function updateReel(){
+  const t=$("#track"),n=t.children.length; if(!n) return;
+  const per=Math.max(1,Math.floor((t.clientWidth+4)/stepW())), pages=Math.max(1,Math.ceil(n/per)), i=Math.min(pages-1,Math.round(t.scrollLeft/(stepW()*per)));
+  $("#dots").innerHTML=pages>1?Array.from({length:pages},(_,k)=>`<i class="${k===i?"on":""}"></i>`).join(""):"";
+  $("#prev").disabled=t.scrollLeft<4; $("#next").disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4;
+}
+function slide(d){const t=$("#track"),per=Math.max(1,Math.floor((t.clientWidth+4)/stepW()));t.scrollBy({left:d*per*stepW(),behavior:smooth()});}
+$("#prev").addEventListener("click",()=>slide(-1));
+$("#next").addEventListener("click",()=>slide(1));
+$("#track").addEventListener("scroll",()=>requestAnimationFrame(updateReel),{passive:true});
+$("#track").addEventListener("keydown",e=>{if(e.key==="ArrowRight"){e.preventDefault();slide(1)}if(e.key==="ArrowLeft"){e.preventDefault();slide(-1)}});
+$("#progs").addEventListener("click",e=>{const b=e.target.closest(".prog"); if(b){prog=b.dataset.p;renderReel();}});
+addEventListener("resize",updateReel);
+function showProgramme(id){prog=id;renderReel();$("#screen").scrollIntoView({behavior:smooth(),block:"start"});}
+renderReel();
+const start=(location.hash==="#skill"||location.hash==="#time")?location.hash.slice(1):(()=>{try{return localStorage.getItem("opal-mode")}catch(e){return null}})();
+setMode(start==="skill"?"skill":"time",false);
+</script>
+
 </body>
 </html>
