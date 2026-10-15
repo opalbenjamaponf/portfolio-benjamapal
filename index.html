@@ -265,7 +265,7 @@ section.block{padding-block:4.5rem;border-top:1px solid var(--line)}
 .status{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;color:#4a463e}
 .status i{width:.5rem;height:.5rem;border-radius:50%;background:#3FA66A;box-shadow:0 0 0 0 rgba(63,166,106,.5);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 7px rgba(63,166,106,0)}100%{box-shadow:0 0 0 0 rgba(63,166,106,0)}}
-.pfade{position:absolute;left:0;right:0;bottom:0;height:42%;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+.pfade{position:absolute;left:0;right:0;bottom:0;height:30%;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
   background:linear-gradient(180deg,rgba(150,150,112,0),rgba(140,142,104,.55));-webkit-mask-image:linear-gradient(180deg,transparent,#000 55%);mask-image:linear-gradient(180deg,transparent,#000 55%)}
 .pbar{position:absolute;left:1rem;right:1rem;bottom:1rem;display:flex;align-items:center;gap:.6rem;text-align:left;color:#fff}
 .pbar .av{width:2.5rem;height:2.5rem;border-radius:50%;object-fit:cover;object-position:50% 15%;border:2px solid rgba(255,255,255,.8)}
@@ -290,8 +290,8 @@ section.block{padding-block:4.5rem;border-top:1px solid var(--line)}
 .circ svg{width:45%;height:45%}
 .feature:hover .circ{background:#fff;color:#1E1E21}
 .sky{position:relative;height:30rem;border-radius:30px;overflow:hidden;margin-bottom:1.6rem;background:var(--pill)}
-.sky-bg{position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;object-position:50% 25%;filter:blur(26px) saturate(1.1);opacity:.85}
-.sky::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 70% at 50% 45%,transparent,color-mix(in srgb,var(--bg) 55%,transparent));pointer-events:none}
+.sky-bg{position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;object-position:50% 25%;filter:blur(9px) saturate(1.1);opacity:.9}
+.sky::after{content:"";position:absolute;inset:0;background:radial-gradient(75% 75% at 50% 45%,transparent,color-mix(in srgb,var(--bg) 35%,transparent));pointer-events:none}
 .sky-tiles{position:absolute;inset:0;z-index:1}
 .tile{all:unset;box-sizing:border-box;position:absolute;display:grid;justify-items:center;gap:.4rem;cursor:pointer;translate:-50% -50%;width:7.5rem;text-align:center}
 .tile .tt{width:4.6rem;aspect-ratio:1;border-radius:10px;overflow:hidden;background:var(--tint);box-shadow:0 14px 26px -12px rgba(0,0,0,.45);
@@ -365,6 +365,25 @@ section.block{padding-block:4.5rem;border-top:1px solid var(--line)}
   .col:last-child{grid-column:1/-1}
 }
 @media (max-width:480px){.cols{grid-template-columns:minmax(0,1fr)} .band{width:var(--wm);padding-inline:1.4rem} .band .tag{display:none}}
+
+/* ---------- off duty gallery ---------- */
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.4rem;padding-block:.5rem 2rem}
+.snap{position:relative;margin:0;aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:var(--paper);
+  box-shadow:0 0 0 6px var(--paper),0 30px 50px -30px rgba(0,0,0,.5);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.snap:nth-child(1){transform:rotate(-2deg)}
+.snap:nth-child(2){transform:translateY(2rem) rotate(1.5deg)}
+.snap:nth-child(3){transform:rotate(-1deg)}
+.snap:nth-child(4){transform:translateY(2rem) rotate(2deg)}
+.snap:hover{transform:translateY(-.4rem) rotate(0) scale(1.02);z-index:1}
+.snap img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.snap figcaption{position:absolute;left:.8rem;bottom:.8rem;font-size:.78rem;font-weight:500;color:#fff;padding:.3rem .8rem;border-radius:999px;
+  background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+@media (max-width:860px){
+  .gallery{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:68%;overflow-x:auto;scroll-snap-type:x mandatory;padding:.8rem .6rem 1.6rem;scrollbar-width:none}
+  .gallery::-webkit-scrollbar{display:none}
+  .snap{scroll-snap-align:center}
+  .snap:nth-child(n){transform:none}
+}
 /* ---------- approach ---------- */
 .approach{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;align-items:start}
 .tenets{display:grid;gap:0}
@@ -440,7 +459,7 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
 <main class="wrap" id="top">
   <section class="hero">
     <div class="profile">
-      <img class="photo" src="img/opal-studio.webp" alt="Opal smiling in a sage dress against a warm beige wall" width="503" height="629">
+      <img class="photo" src="img/opal-studio.webp" alt="Opal smiling in a sage dress against a warm beige wall" width="1006" height="1258">
       <div class="ptop"><b>Opal</b><span class="status"><i aria-hidden="true"></i>Open to new projects</span></div>
       <div class="pfade" aria-hidden="true"></div>
       <div class="pbar">
@@ -462,7 +481,7 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
   </section>
 
   <a class="feature" href="#explore" aria-label="Explore Opal's work">
-    <img src="img/opal-bali.webp" alt="Opal laughing in front of Bali rice terraces" loading="lazy" width="654" height="767">
+    <img src="img/opal-bali.webp" alt="Opal laughing in front of Bali rice terraces" loading="lazy" width="1308" height="1534">
     <div class="glasscap">
       <p>A storyteller’s instinct, a metrics mind. From TV sets to product squads.</p>
       <div class="capfoot"><span class="mk">BENJAMA<em>PAL</em></span><span class="circ" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
@@ -549,9 +568,22 @@ footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;paddin
     </div>
   </section>
 
+  <section class="block" id="offduty">
+    <div class="head">
+      <div><p class="label">Off duty</p><h2>Curious by nature, <em class="s">everywhere.</em></h2></div>
+      <p>New streets, new people, new stories. The same curiosity I bring to every interview and every user.</p>
+    </div>
+    <div class="gallery">
+      <figure class="snap"><img src="img/opal-hongkong.webp" alt="Opal laughing on a Hong Kong street with red taxis behind" loading="lazy" width="900" height="1255"><figcaption>Hong Kong</figcaption></figure>
+      <figure class="snap"><img src="img/opal-cappadocia.webp" alt="Opal smiling in sunglasses among the rock formations of Cappadocia" loading="lazy" width="900" height="1109"><figcaption>Cappadocia</figcaption></figure>
+      <figure class="snap"><img src="img/opal-black-sand.webp" alt="Opal taking a photo on a black volcanic sand field below a green slope" loading="lazy" width="900" height="1153"><figcaption>Black sand fields</figcaption></figure>
+      <figure class="snap"><img src="img/opal-shanghai-street.webp" alt="Opal smiling on a Shanghai street in a cream sweater" loading="lazy" width="900" height="1262"><figcaption>Shanghai</figcaption></figure>
+    </div>
+  </section>
+
   <section class="contact" id="contact">
     <div class="hello">
-      <img src="img/opal-shanghai.webp" alt="Opal laughing on a sunny Shanghai street" loading="lazy" width="659" height="873">
+      <img src="img/opal-shanghai.webp" alt="Opal laughing on a sunny Shanghai street" loading="lazy" width="1318" height="1746">
       <span class="hello-mk">BENJAMA<em>PAL</em></span><span class="hello-tag">CONTACT</span>
       <div class="hello-copy"><h2>For the teams that care about how they grow…</h2>
         <a class="hello-btn" href="https://www.instagram.com/benjamapal/" target="_blank" rel="noopener">say hi →</a></div>
